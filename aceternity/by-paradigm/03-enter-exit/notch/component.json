@@ -1,0 +1,59 @@
+{
+  "name": "notch",
+  "title": "Notch",
+  "kind": "components",
+  "description": "A floating, configurable notch that pins to the top or bottom of the screen. Pass an array of items with links and it animates the active state as you switch between them.",
+  "categories": [
+    "navigation",
+    "navbar",
+    "floating"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/notch",
+  "files": [
+    "components/ui/notch.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 311,
+    "files": 1,
+    "motion_apis": [
+      "AnimatePresence",
+      "layoutId"
+    ],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef",
+      "useId"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 5,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 5,
+    "dark_classes": 0,
+    "arbitrary_values": 1,
+    "event_listeners": [
+      "keydown"
+    ],
+    "raf": false,
+    "cn_calls": 5,
+    "use_client": true,
+    "interfaces": [
+      "NotchProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 9
+  }
+}

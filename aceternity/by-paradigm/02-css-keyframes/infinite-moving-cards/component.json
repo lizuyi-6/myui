@@ -1,0 +1,51 @@
+{
+  "name": "infinite-moving-cards",
+  "title": "Infinite Moving Cards",
+  "kind": "components",
+  "description": "A customizable group of cards that move infinitely in a loop. Made with Framer Motion and Tailwind CSS.",
+  "categories": [
+    "testimonials",
+    "utility",
+    "marquee"
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/infinite-moving-cards",
+  "files": [
+    "components/ui/infinite-moving-cards.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "02-css-keyframes",
+  "signals": {
+    "loc": 118,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 0,
+    "animate_classes": [
+      "animate-scroll"
+    ],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 0,
+    "dark_classes": 5,
+    "arbitrary_values": 9,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 2,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

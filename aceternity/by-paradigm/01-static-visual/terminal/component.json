@@ -1,0 +1,57 @@
+{
+  "name": "terminal",
+  "title": "Terminal",
+  "kind": "components",
+  "description": "A mac style terminal component with bash syntax highlighting and typewriter effect.",
+  "categories": [
+    "card",
+    "background",
+    "special",
+    "illustration"
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/terminal",
+  "files": [
+    "components/ui/terminal.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "01-static-visual",
+  "signals": {
+    "loc": 524,
+    "files": 1,
+    "motion_apis": [
+      "useInView"
+    ],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef",
+      "useMemo"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 0,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 0,
+    "dark_classes": 0,
+    "arbitrary_values": 1,
+    "event_listeners": [
+      "keydown"
+    ],
+    "raf": false,
+    "cn_calls": 2,
+    "use_client": true,
+    "interfaces": [
+      "TerminalProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

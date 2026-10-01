@@ -1,0 +1,53 @@
+{
+  "name": "hero-highlight",
+  "title": "Hero Highlight",
+  "kind": "components",
+  "description": "A background effect with a text highlight component, perfect for hero sections.",
+  "categories": [
+    "hero",
+    "section",
+    "special",
+    "text",
+    "background"
+  ],
+  "dependencies": [
+    "mini-svg-data-uri",
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/hero-highlight",
+  "files": [
+    "components/ui/hero-highlight.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "05-motion-pipeline",
+  "signals": {
+    "loc": 141,
+    "files": 1,
+    "motion_apis": [
+      "useMotionValue",
+      "useMotionTemplate"
+    ],
+    "react_hooks": [],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 3,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 6,
+    "blur": 0,
+    "dark_classes": 8,
+    "arbitrary_values": 1,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 3,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 2
+  }
+}

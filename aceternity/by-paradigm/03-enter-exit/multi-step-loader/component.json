@@ -1,0 +1,53 @@
+{
+  "name": "multi-step-loader",
+  "title": "Multi Step Loader",
+  "kind": "components",
+  "description": "A step loader for screens that take a lot of time to load.",
+  "categories": [
+    "loader",
+    "special",
+    "utility"
+  ],
+  "dependencies": [
+    "@tabler/icons-react",
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/multi-step-loader",
+  "files": [
+    "components/ui/multi-step-loader.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 147,
+    "files": 1,
+    "motion_apis": [
+      "AnimatePresence"
+    ],
+    "react_hooks": [
+      "useState",
+      "useEffect"
+    ],
+    "pkgs": [],
+    "svg_tags": 2,
+    "svg_paths": 2,
+    "svg_filters": 0,
+    "motion_elements": 2,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 2,
+    "blur": 1,
+    "dark_classes": 6,
+    "arbitrary_values": 1,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 5,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 5
+  }
+}

@@ -1,0 +1,111 @@
+.lc-shutter-text-root {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--lc-ink);
+  font-family: inherit;
+  position: relative;
+  width: min(100%, 480px);
+  padding: 30px 20px 75px;
+  overflow: hidden;
+  background: var(--lc-surface);
+  border-radius: 6px;
+}
+.lc-shutter-text-eyebrow {
+  font: 9px monospace;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+.lc-shutter-text-word {
+  margin: 40px 0 28px;
+  height: 152px;
+  color: var(--lc-accent);
+}
+.lc-shutter-text-slice {
+  position: relative;
+  height: 38px;
+  perspective: 450px;
+  overflow: hidden;
+}
+.lc-shutter-text-letter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  height: 152px;
+  line-height: 152px;
+  font-size: clamp(54px, 16vw, 116px);
+  font-weight: 900;
+  letter-spacing: -5px;
+  white-space: nowrap;
+  text-align: center;
+  transform-origin: center;
+}
+.lc-shutter-text-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.lc-shutter-text-option {
+  box-sizing: border-box;
+  min-height: 44px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-ink);
+  padding: 10px 14px;
+  background: transparent;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #f8f6ee30;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #f8f6ee30;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #f8f6ee30;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #f8f6ee30;
+  border-radius: 24px;
+  font: 10px monospace;
+}
+.lc-shutter-text-option:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-shutter-text-option[aria-pressed='true'] {
+  color: var(--lc-surface);
+  background: var(--lc-accent);
+}
+.lc-shutter-text-pause {
+  box-sizing: border-box;
+  min-height: 44px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-ink);
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 10;
+  width: 44px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: currentColor;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: currentColor;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: currentColor;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: currentColor;
+  border-radius: 50%;
+  background: var(--lc-surface);
+  font-size: 13px;
+}
+.lc-shutter-text-pause:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}

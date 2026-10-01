@@ -1,0 +1,70 @@
+.lc-spring-accordion-root {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--lc-ink);
+  font-family: inherit;
+  width: min(100%, 440px);
+  padding: 8px 24px;
+  background: var(--lc-surface);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: var(--lc-ink);
+}
+.lc-spring-accordion-item {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #bcbab4;
+}
+.lc-spring-accordion-heading {
+  margin: 0;
+}
+.lc-spring-accordion-button {
+  box-sizing: border-box;
+  min-height: 44px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-ink);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  border-top-width: 0;
+  border-top-style: undefined;
+  border-top-color:;
+  border-right-width: 0;
+  border-right-style: undefined;
+  border-right-color:;
+  border-bottom-width: 0;
+  border-bottom-style: undefined;
+  border-bottom-color:;
+  border-left-width: 0;
+  border-left-style: undefined;
+  border-left-color:;
+  background: transparent;
+  text-align: left;
+  padding: 20px 0;
+  font-size: 16px;
+}
+.lc-spring-accordion-button:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-spring-accordion-number {
+  font-family: monospace;
+  font-size: 11px;
+  opacity: 0.6;
+}
+.lc-spring-accordion-title {
+  flex: 1;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+.lc-spring-accordion-clip {
+  overflow: hidden;
+}
+.lc-spring-accordion-content {
+  padding: 0 0 20px 32px;
+  font-size: 14px;
+  line-height: 1.8;
+}

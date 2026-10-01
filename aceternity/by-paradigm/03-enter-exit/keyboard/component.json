@@ -1,0 +1,62 @@
+{
+  "name": "keyboard",
+  "title": "Keyboard",
+  "kind": "components",
+  "description": "A mac style keyboard component with mechanical keys sound effects.",
+  "categories": [
+    "card",
+    "background",
+    "gradient",
+    "special",
+    "call to action"
+  ],
+  "dependencies": [
+    "@tabler/icons-react",
+    "motion/react"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/keyboard",
+  "files": [
+    "components/ui/keyboard.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 972,
+    "files": 1,
+    "motion_apis": [
+      "AnimatePresence"
+    ],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef",
+      "useCallback",
+      "createContext"
+    ],
+    "pkgs": [
+      "@tabler/icons-react"
+    ],
+    "svg_tags": 1,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 2,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 5,
+    "blur": 2,
+    "dark_classes": 0,
+    "arbitrary_values": 84,
+    "event_listeners": [
+      "keydown"
+    ],
+    "raf": false,
+    "cn_calls": 6,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 5
+  }
+}

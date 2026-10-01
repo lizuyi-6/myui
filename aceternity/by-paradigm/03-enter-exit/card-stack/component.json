@@ -1,0 +1,51 @@
+{
+  "name": "card-stack",
+  "title": "Card Stack",
+  "kind": "components",
+  "description": "Cards stack on top of each other after some interval. Perfect for showing testimonials.",
+  "categories": [
+    "card",
+    "testimonials",
+    "gradient",
+    "features"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/card-stack",
+  "files": [
+    "components/ui/card-stack.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 75,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useState",
+      "useEffect"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 1,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 0,
+    "dark_classes": 6,
+    "arbitrary_values": 0,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 0,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 1
+  }
+}

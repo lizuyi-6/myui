@@ -1,0 +1,58 @@
+{
+  "name": "carousel",
+  "title": "Carousel",
+  "kind": "components",
+  "description": "A customizable carousel with microinteractions and slider.",
+  "categories": [
+    "carousel",
+    "special",
+    "features"
+  ],
+  "dependencies": [
+    "@tabler/icons-react"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/carousel",
+  "files": [
+    "components/ui/carousel.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "01-static-visual",
+  "signals": {
+    "loc": 215,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef",
+      "useId"
+    ],
+    "pkgs": [
+      "@tabler/icons-react"
+    ],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 0,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 0,
+    "dark_classes": 2,
+    "arbitrary_values": 14,
+    "event_listeners": [],
+    "raf": true,
+    "cn_calls": 0,
+    "use_client": true,
+    "interfaces": [
+      "SlideProps",
+      "CarouselControlProps",
+      "CarouselProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

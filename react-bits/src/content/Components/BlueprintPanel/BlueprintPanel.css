@@ -1,0 +1,130 @@
+.lc-blueprint-panel-root {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--lc-ink);
+  font-family: monospace;
+  width: min(100%, 340px);
+  padding: 24px;
+  background-color: var(--lc-surface);
+  background-image:
+    linear-gradient(#d8e9f814 1px, transparent 1px), linear-gradient(90deg, #d8e9f814 1px, transparent 1px);
+  background-size: 20px 20px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #a9ccea80;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #a9ccea80;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #a9ccea80;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #a9ccea80;
+}
+.lc-blueprint-panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12px;
+}
+.lc-blueprint-panel-tag {
+  font-size: 9px;
+  color: var(--lc-accent);
+}
+.lc-blueprint-panel-drawing {
+  position: relative;
+  margin: 22px 24px 22px 8px;
+  padding-top: 20px;
+}
+.lc-blueprint-panel-width {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  font-size: 10px;
+  color: var(--lc-accent);
+}
+.lc-blueprint-panel-object {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--lc-ink);
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: var(--lc-ink);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--lc-ink);
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: var(--lc-ink);
+  border-radius: 18px 18px 4px 4px;
+  outline: 1px dashed #a9ccea80;
+  outline-offset: 8px;
+}
+.lc-blueprint-panel-center {
+  font-size: 26px;
+  color: #a9ccea80;
+}
+.lc-blueprint-panel-corner {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  color: var(--lc-accent);
+  font-size: 20px;
+}
+.lc-blueprint-panel-height {
+  position: absolute;
+  right: -28px;
+  top: 50%;
+  font-size: 9px;
+  color: var(--lc-accent);
+  writing-mode: vertical-rl;
+}
+.lc-blueprint-panel-button {
+  box-sizing: border-box;
+  min-height: 44px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 0;
+  border-top-width: 1px;
+  border-top-style: dashed;
+  border-top-color: #a9ccea80;
+  border-right-width: 0;
+  border-right-style: undefined;
+  border-right-color:;
+  border-bottom-width: 0;
+  border-bottom-style: undefined;
+  border-bottom-color:;
+  border-left-width: 0;
+  border-left-style: undefined;
+  border-left-color:;
+  background: transparent;
+  font-size: 11px;
+}
+.lc-blueprint-panel-button:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-blueprint-panel-clip {
+  overflow: hidden;
+}
+.lc-blueprint-panel-details {
+  padding: 12px 0 4px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--lc-accent);
+}

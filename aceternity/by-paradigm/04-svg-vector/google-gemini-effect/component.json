@@ -1,0 +1,49 @@
+{
+  "name": "google-gemini-effect",
+  "title": "Google Gemini Effect",
+  "kind": "components",
+  "description": "An effect of SVGs as seen on the Google Gemini Website",
+  "categories": [
+    "footer",
+    "section",
+    "special"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/google-gemini-effect",
+  "files": [
+    "components/ui/google-gemini-effect.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "04-svg-vector",
+  "signals": {
+    "loc": 162,
+    "files": 1,
+    "motion_apis": [
+      "MotionValue"
+    ],
+    "react_hooks": [],
+    "pkgs": [],
+    "svg_tags": 1,
+    "svg_paths": 5,
+    "svg_filters": 2,
+    "motion_elements": 5,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 4,
+    "blur": 7,
+    "dark_classes": 0,
+    "arbitrary_values": 1,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 1,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 5
+  }
+}

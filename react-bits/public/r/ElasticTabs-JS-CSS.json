@@ -1,0 +1,30 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "ElasticTabs-JS-CSS",
+	"title": "ElasticTabs",
+	"description": "Soft segmented tabs with a spring-driven shared indicator, preserved panels and roving keyboard focus.",
+	"type": "registry:component",
+	"files": [
+		{
+			"type": "registry:file",
+			"path": "ElasticTabs.css",
+			"target": "@components/ElasticTabs.css",
+			"content": ".lc-elastic-tabs-root {\n  box-sizing: border-box;\n  min-width: 0;\n  max-width: 100%;\n  color: var(--lc-ink);\n  font-family: inherit;\n  width: min(100%, 420px);\n  padding: 24px;\n  background: var(--lc-surface);\n  border-radius: 24px;\n}\n.lc-elastic-tabs-track {\n  display: flex;\n  gap: 4px;\n  padding: 5px;\n  border-top-width: 1px;\n  border-top-style: solid;\n  border-top-color: #d8cec7;\n  border-right-width: 1px;\n  border-right-style: solid;\n  border-right-color: #d8cec7;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  border-bottom-color: #d8cec7;\n  border-left-width: 1px;\n  border-left-style: solid;\n  border-left-color: #d8cec7;\n  border-radius: 16px;\n}\n.lc-elastic-tabs-tab {\n  box-sizing: border-box;\n  min-height: 44px;\n  font-family: inherit;\n  cursor: pointer;\n  color: var(--lc-ink);\n  position: relative;\n  flex: 1;\n  min-width: 0;\n  border-top-width: 0;\n  border-top-style: undefined;\n  border-top-color:;\n  border-right-width: 0;\n  border-right-style: undefined;\n  border-right-color:;\n  border-bottom-width: 0;\n  border-bottom-style: undefined;\n  border-bottom-color:;\n  border-left-width: 0;\n  border-left-style: undefined;\n  border-left-color:;\n  background: transparent;\n  padding: 10px;\n  border-radius: 12px;\n  font-size: 14px;\n}\n.lc-elastic-tabs-tab:focus-visible {\n  outline: 2px solid var(--lc-accent);\n  outline-offset: 4px;\n}\n.lc-elastic-tabs-indicator {\n  position: absolute;\n  inset: 0;\n  border-radius: 12px;\n  background: color-mix(in srgb, var(--lc-accent) 18%, transparent);\n}\n.lc-elastic-tabs-label {\n  position: relative;\n}\n.lc-elastic-tabs-panel {\n  margin-top: 22px;\n  line-height: 1.7;\n  font-size: 15px;\n}\n.lc-elastic-tabs-panel:focus-visible {\n  outline: 2px solid var(--lc-accent);\n  outline-offset: 4px;\n}\n"
+		},
+		{
+			"type": "registry:component",
+			"path": "ElasticTabs.jsx",
+			"target": "@components/ElasticTabs.jsx",
+			"content": "'use client';\nimport { useState, useRef, useId, useSyncExternalStore } from 'react';\nimport { motion } from 'motion/react';\nimport './ElasticTabs.css';\nconst c = {\n  root: 'lc-elastic-tabs-root',\n  track: 'lc-elastic-tabs-track',\n  tab: 'lc-elastic-tabs-tab',\n  indicator: 'lc-elastic-tabs-indicator',\n  label: 'lc-elastic-tabs-label',\n  panel: 'lc-elastic-tabs-panel'\n};\nconst motionQuery = '(prefers-reduced-motion: reduce)';\nconst motionSnapshot = () => typeof window !== 'undefined' && window.matchMedia(motionQuery).matches;\nconst motionSubscribe = (listener) => {\n  const media = window.matchMedia(motionQuery);\n  media.addEventListener('change', listener);\n  return () => media.removeEventListener('change', listener);\n};\nfunction useMotionPreference() {\n  return useSyncExternalStore(motionSubscribe, motionSnapshot, () => false);\n}\nexport default function ElasticTabs({\n  items,\n  value,\n  defaultValue,\n  onChange,\n  ariaLabel = 'Explore',\n  accent = '#d97745',\n  surface = '#fff8f1',\n  ink = '#3b2d24',\n  className = ''\n}) {\n  const id = useId();\n  const reduce = useMotionPreference();\n  const refs = useRef([]);\n  const [inner, setInner] = useState(defaultValue ?? items[0]?.id);\n  const active = items.some((item) => item.id === (value ?? inner)) ? (value ?? inner) : items[0]?.id;\n  const choose = (next) => {\n    if (value === undefined) setInner(next);\n    onChange?.(next);\n  };\n  const navigate = (event, index) => {\n    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;\n    event.preventDefault();\n    const next =\n      event.key === 'Home'\n        ? 0\n        : event.key === 'End'\n          ? items.length - 1\n          : (index + (event.key === 'ArrowRight' ? 1 : -1) + items.length) % items.length;\n    choose(items[next].id);\n    refs.current[next]?.focus();\n  };\n  return (\n    <div\n      className={[c.root, className].filter(Boolean).join(' ')}\n      style={{ '--lc-accent': accent, '--lc-surface': surface, '--lc-ink': ink }}\n    >\n      <div role=\"tablist\" aria-label={ariaLabel} className={c.track}>\n        {items.map((item, index) => (\n          <button\n            key={item.id}\n            type=\"button\"\n            role=\"tab\"\n            ref={(el) => {\n              refs.current[index] = el;\n            }}\n            id={id + '-tab-' + index}\n            aria-controls={id + '-panel-' + index}\n            aria-selected={active === item.id}\n            tabIndex={active === item.id ? 0 : -1}\n            onClick={() => choose(item.id)}\n            onKeyDown={(event) => navigate(event, index)}\n            className={c.tab}\n          >\n            {active === item.id && (\n              <motion.span\n                aria-hidden=\"true\"\n                layoutId={id + '-indicator'}\n                className={c.indicator}\n                transition={reduce ? { duration: 0 } : { type: 'spring', stiffness: 380, damping: 27 }}\n              />\n            )}\n            <span className={c.label}>{item.label}</span>\n          </button>\n        ))}\n      </div>\n      {items.map((item, index) => (\n        <div\n          key={item.id}\n          role=\"tabpanel\"\n          id={id + '-panel-' + index}\n          aria-labelledby={id + '-tab-' + index}\n          hidden={active !== item.id}\n          tabIndex={0}\n          className={c.panel}\n        >\n          {item.content}\n        </div>\n      ))}\n    </div>\n  );\n}\n"
+		}
+	],
+	"registryDependencies": [],
+	"dependencies": [
+		"motion@^12.23.12"
+	],
+	"meta": {
+		"origin": "local",
+		"style": "Soft minimal / 柔和极简",
+		"docsUrl": "http://localhost:5290/micro/elastic-tabs"
+	}
+}

@@ -1,0 +1,49 @@
+{
+  "name": "3d-pin",
+  "title": "3D Animated Pin",
+  "kind": "components",
+  "description": "A gradient pin that animates on hover, perfect for product links.",
+  "categories": [
+    "card",
+    "hover",
+    "special"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/3d-pin",
+  "files": [
+    "components/ui/3d-pin.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 167,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useState"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 8,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 13,
+    "blur": 2,
+    "dark_classes": 0,
+    "arbitrary_values": 30,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 2,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 6
+  }
+}

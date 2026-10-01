@@ -1,0 +1,30 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "PixelMeter-TS-CSS",
+	"title": "PixelMeter",
+	"description": "A pixel matrix meter with staggered cell response and a native stepped range control.",
+	"type": "registry:component",
+	"files": [
+		{
+			"type": "registry:file",
+			"path": "PixelMeter.css",
+			"target": "@components/PixelMeter.css",
+			"content": ".lc-pixel-meter-root {\n  box-sizing: border-box;\n  min-width: 0;\n  max-width: 100%;\n  color: var(--lc-ink);\n  font-family: monospace;\n  width: min(100%, 320px);\n  padding: 24px;\n  background: var(--lc-surface);\n  border-top-width: 2px;\n  border-top-style: solid;\n  border-top-color: #645579;\n  border-right-width: 2px;\n  border-right-style: solid;\n  border-right-color: #645579;\n  border-bottom-width: 2px;\n  border-bottom-style: solid;\n  border-bottom-color: #645579;\n  border-left-width: 2px;\n  border-left-style: solid;\n  border-left-color: #645579;\n  border-radius: 8px;\n}\n.lc-pixel-meter-header {\n  display: flex;\n  justify-content: space-between;\n  gap: 12px;\n  font-size: 12px;\n  letter-spacing: 1px;\n}\n.lc-pixel-meter-matrix {\n  display: grid;\n  grid-template-columns: repeat(8, minmax(0, 1fr));\n  gap: 6px;\n  margin: 24px 0;\n  padding: 10px;\n  background: #0b0915;\n  border-top-width: 1px;\n  border-top-style: solid;\n  border-top-color: #453451;\n  border-right-width: 1px;\n  border-right-style: solid;\n  border-right-color: #453451;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  border-bottom-color: #453451;\n  border-left-width: 1px;\n  border-left-style: solid;\n  border-left-color: #453451;\n}\n.lc-pixel-meter-pixel {\n  display: block;\n  aspect-ratio: 1;\n  background: var(--lc-accent);\n  box-shadow: 0 0 5px color-mix(in srgb, var(--lc-accent) 50%, transparent);\n}\n.lc-pixel-meter-range {\n  display: block;\n  width: 100%;\n  height: 44px;\n  accent-color: var(--lc-accent);\n  cursor: pointer;\n}\n.lc-pixel-meter-range:focus-visible {\n  outline: 2px solid var(--lc-accent);\n  outline-offset: 4px;\n}\n.lc-pixel-meter-legend {\n  display: flex;\n  justify-content: space-between;\n  font-size: 9px;\n  letter-spacing: 2px;\n}\n"
+		},
+		{
+			"type": "registry:component",
+			"path": "PixelMeter.tsx",
+			"target": "@components/PixelMeter.tsx",
+			"content": "'use client';\nimport { useState, useId, useSyncExternalStore } from 'react';\nimport type { CSSProperties } from 'react';\nimport { motion } from 'motion/react';\nimport './PixelMeter.css';\nconst c = {\n  root: 'lc-pixel-meter-root',\n  header: 'lc-pixel-meter-header',\n  matrix: 'lc-pixel-meter-matrix',\n  pixel: 'lc-pixel-meter-pixel',\n  range: 'lc-pixel-meter-range',\n  legend: 'lc-pixel-meter-legend'\n};\n\nexport interface PixelMeterProps {\n  value?: number;\n  defaultValue?: number;\n  onChange?: (value: number) => void;\n  max?: number;\n  label?: string;\n  accent?: string;\n  surface?: string;\n  ink?: string;\n  className?: string;\n}\n\nconst motionQuery = '(prefers-reduced-motion: reduce)';\nconst motionSnapshot = () => typeof window !== 'undefined' && window.matchMedia(motionQuery).matches;\nconst motionSubscribe = (listener: () => void) => {\n  const media = window.matchMedia(motionQuery);\n  media.addEventListener('change', listener);\n  return () => media.removeEventListener('change', listener);\n};\nfunction useMotionPreference() {\n  return useSyncExternalStore(motionSubscribe, motionSnapshot, () => false);\n}\n\nexport default function PixelMeter({\n  value,\n  defaultValue = 8,\n  onChange,\n  max = 16,\n  label = 'ENERGY',\n  accent = '#c29cff',\n  surface = '#201c30',\n  ink = '#f0e8ff',\n  className = ''\n}: PixelMeterProps) {\n  const id = useId();\n  const reduce = useMotionPreference();\n  const [inner, setInner] = useState(defaultValue);\n  const current = Math.max(0, Math.min(max, value ?? inner));\n  const lit = max > 0 ? Math.round((current / max) * 32) : 0;\n  return (\n    <div\n      className={[c.root, className].filter(Boolean).join(' ')}\n      style={{ '--lc-accent': accent, '--lc-surface': surface, '--lc-ink': ink } as CSSProperties}\n    >\n      <div className={c.header}>\n        <label htmlFor={id}>{label}</label>\n        <output htmlFor={id}>\n          {String(current).padStart(2, '0')} / {max}\n        </output>\n      </div>\n      <div className={c.matrix} aria-hidden=\"true\">\n        {Array.from({ length: 32 }, (_, index) => (\n          <motion.span\n            key={index}\n            data-lit={index < lit}\n            className={c.pixel}\n            animate={{ opacity: index < lit ? 1 : 0.12, scale: index < lit && !reduce ? 1 : 0.88 }}\n            transition={{ duration: reduce ? 0 : 0.15, delay: reduce ? 0 : index * 0.008 }}\n          />\n        ))}\n      </div>\n      <input\n        id={id}\n        className={c.range}\n        type=\"range\"\n        min=\"0\"\n        max={max}\n        step=\"1\"\n        value={current}\n        onChange={(event) => {\n          const next = Number(event.target.value);\n          if (value === undefined) setInner(next);\n          onChange?.(next);\n        }}\n      />\n      <div className={c.legend}>\n        LOW<span>HIGH</span>\n      </div>\n    </div>\n  );\n}\n"
+		}
+	],
+	"registryDependencies": [],
+	"dependencies": [
+		"motion@^12.23.12"
+	],
+	"meta": {
+		"origin": "local",
+		"style": "Pixel synthesizer / 像素合成器",
+		"docsUrl": "http://localhost:5290/micro/pixel-meter"
+	}
+}

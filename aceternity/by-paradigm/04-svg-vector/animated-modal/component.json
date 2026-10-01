@@ -1,0 +1,54 @@
+{
+  "name": "animated-modal",
+  "title": "Animated Modal",
+  "kind": "components",
+  "description": "A customizable, compound modal component with animated transitions",
+  "categories": [
+    "special",
+    "utilities",
+    "modal"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/animated-modal",
+  "files": [
+    "components/ui/animated-modal.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "04-svg-vector",
+  "signals": {
+    "loc": 244,
+    "files": 1,
+    "motion_apis": [
+      "AnimatePresence"
+    ],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef",
+      "createContext"
+    ],
+    "pkgs": [],
+    "svg_tags": 1,
+    "svg_paths": 3,
+    "svg_filters": 0,
+    "motion_elements": 3,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 4,
+    "dark_classes": 5,
+    "arbitrary_values": 3,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 4,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 9
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "noise-background",
+  "title": "Noise Background",
+  "kind": "components",
+  "description": "A dynamic background effect with animated gradients, noise texture, and smooth motion.",
+  "categories": [
+    "card",
+    "background",
+    "gradient",
+    "special",
+    "call to action"
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/noise-background",
+  "files": [
+    "components/ui/noise-background.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "05-motion-pipeline",
+  "signals": {
+    "loc": 232,
+    "files": 1,
+    "motion_apis": [
+      "useTransform",
+      "useSpring",
+      "useMotionValue",
+      "useAnimationFrame",
+      "useMotionTemplate",
+      "MotionValue"
+    ],
+    "react_hooks": [
+      "useEffect",
+      "useRef"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 2,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 3,
+    "dark_classes": 2,
+    "arbitrary_values": 4,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 2,
+    "use_client": true,
+    "interfaces": [
+      "NoiseBackgroundProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

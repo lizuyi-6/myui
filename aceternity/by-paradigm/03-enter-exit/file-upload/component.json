@@ -1,0 +1,55 @@
+{
+  "name": "file-upload",
+  "title": "File Upload",
+  "kind": "components",
+  "description": "A minimal file upload form with background grid, drag and drop, and micro interactions.",
+  "categories": [
+    "form",
+    "special"
+  ],
+  "dependencies": [
+    "@tabler/icons-react",
+    "react-dropzone",
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/file-upload",
+  "files": [
+    "components/ui/file-upload.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 195,
+    "files": 1,
+    "motion_apis": [
+      "layoutId"
+    ],
+    "react_hooks": [
+      "useState",
+      "useRef"
+    ],
+    "pkgs": [
+      "@tabler/icons-react"
+    ],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 9,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 0,
+    "dark_classes": 15,
+    "arbitrary_values": 6,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 2,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 10
+  }
+}

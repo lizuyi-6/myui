@@ -1,0 +1,60 @@
+{
+  "name": "canvas-reveal-effect",
+  "title": "Canvas Reveal Effect",
+  "kind": "components",
+  "description": "A dot background that expands on hover, as seen on Clerk's website",
+  "categories": [
+    "card",
+    "background",
+    "gradient",
+    "canvas",
+    "special",
+    "call to action"
+  ],
+  "dependencies": [
+    "three",
+    "@react-three/fiber"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/canvas-reveal-effect",
+  "files": [
+    "components/ui/canvas-reveal-effect.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "09-webgl-shader",
+  "signals": {
+    "loc": 309,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useRef",
+      "useMemo"
+    ],
+    "pkgs": [
+      "three",
+      "@react-three/fiber"
+    ],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 0,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": true,
+    "tsparticles": false,
+    "gradients": 4,
+    "blur": 0,
+    "dark_classes": 0,
+    "arbitrary_values": 1,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 1,
+    "use_client": true,
+    "interfaces": [
+      "DotMatrixProps",
+      "ShaderProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

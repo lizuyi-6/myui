@@ -1,0 +1,30 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "SpringAccordion-JS-CSS",
+	"title": "SpringAccordion",
+	"description": "Editorial ruled accordion with numbered headings and restrained spring expansion.",
+	"type": "registry:component",
+	"files": [
+		{
+			"type": "registry:file",
+			"path": "SpringAccordion.css",
+			"target": "@components/SpringAccordion.css",
+			"content": ".lc-spring-accordion-root {\n  box-sizing: border-box;\n  min-width: 0;\n  max-width: 100%;\n  color: var(--lc-ink);\n  font-family: inherit;\n  width: min(100%, 440px);\n  padding: 8px 24px;\n  background: var(--lc-surface);\n  border-top-width: 2px;\n  border-top-style: solid;\n  border-top-color: var(--lc-ink);\n}\n.lc-spring-accordion-item {\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  border-bottom-color: #bcbab4;\n}\n.lc-spring-accordion-heading {\n  margin: 0;\n}\n.lc-spring-accordion-button {\n  box-sizing: border-box;\n  min-height: 44px;\n  font-family: inherit;\n  cursor: pointer;\n  color: var(--lc-ink);\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  width: 100%;\n  border-top-width: 0;\n  border-top-style: undefined;\n  border-top-color:;\n  border-right-width: 0;\n  border-right-style: undefined;\n  border-right-color:;\n  border-bottom-width: 0;\n  border-bottom-style: undefined;\n  border-bottom-color:;\n  border-left-width: 0;\n  border-left-style: undefined;\n  border-left-color:;\n  background: transparent;\n  text-align: left;\n  padding: 20px 0;\n  font-size: 16px;\n}\n.lc-spring-accordion-button:focus-visible {\n  outline: 2px solid var(--lc-accent);\n  outline-offset: 4px;\n}\n.lc-spring-accordion-number {\n  font-family: monospace;\n  font-size: 11px;\n  opacity: 0.6;\n}\n.lc-spring-accordion-title {\n  flex: 1;\n  font-family: Georgia, serif;\n  font-weight: 400;\n}\n.lc-spring-accordion-clip {\n  overflow: hidden;\n}\n.lc-spring-accordion-content {\n  padding: 0 0 20px 32px;\n  font-size: 14px;\n  line-height: 1.8;\n}\n"
+		},
+		{
+			"type": "registry:component",
+			"path": "SpringAccordion.jsx",
+			"target": "@components/SpringAccordion.jsx",
+			"content": "'use client';\nimport { useState, useId, useSyncExternalStore } from 'react';\nimport { motion, AnimatePresence } from 'motion/react';\nimport './SpringAccordion.css';\nconst c = {\n  root: 'lc-spring-accordion-root',\n  item: 'lc-spring-accordion-item',\n  heading: 'lc-spring-accordion-heading',\n  button: 'lc-spring-accordion-button',\n  number: 'lc-spring-accordion-number',\n  title: 'lc-spring-accordion-title',\n  clip: 'lc-spring-accordion-clip',\n  content: 'lc-spring-accordion-content'\n};\nconst motionQuery = '(prefers-reduced-motion: reduce)';\nconst motionSnapshot = () => typeof window !== 'undefined' && window.matchMedia(motionQuery).matches;\nconst motionSubscribe = (listener) => {\n  const media = window.matchMedia(motionQuery);\n  media.addEventListener('change', listener);\n  return () => media.removeEventListener('change', listener);\n};\nfunction useMotionPreference() {\n  return useSyncExternalStore(motionSubscribe, motionSnapshot, () => false);\n}\nexport default function SpringAccordion({\n  items,\n  value,\n  defaultValue = null,\n  onChange,\n  accent = '#252525',\n  surface = '#f7f6f2',\n  ink = '#252525',\n  className = ''\n}) {\n  const id = useId();\n  const reduce = useMotionPreference();\n  const [inner, setInner] = useState(defaultValue);\n  const active = value === undefined ? inner : value;\n  return (\n    <div\n      className={[c.root, className].filter(Boolean).join(' ')}\n      style={{ '--lc-accent': accent, '--lc-surface': surface, '--lc-ink': ink }}\n    >\n      {items.map((item, index) => {\n        const open = active === item.id;\n        return (\n          <div key={item.id} className={c.item}>\n            <h3 className={c.heading}>\n              <button\n                type=\"button\"\n                id={id + '-heading-' + index}\n                aria-expanded={open}\n                aria-controls={id + '-panel-' + index}\n                className={c.button}\n                onClick={() => {\n                  const next = open ? null : item.id;\n                  if (value === undefined) setInner(next);\n                  onChange?.(next);\n                }}\n              >\n                <span className={c.number}>{String(index + 1).padStart(2, '0')}</span>\n                <span className={c.title}>{item.title}</span>\n                <motion.span\n                  aria-hidden=\"true\"\n                  animate={{ rotate: open ? 45 : 0 }}\n                  transition={reduce ? { duration: 0 } : { type: 'spring', stiffness: 300, damping: 24 }}\n                >\n                  +\n                </motion.span>\n              </button>\n            </h3>\n            <div\n              id={id + '-panel-' + index}\n              role=\"region\"\n              aria-labelledby={id + '-heading-' + index}\n              aria-hidden={!open}\n              inert={!open}\n            >\n              <AnimatePresence initial={false}>\n                {open && (\n                  <motion.div\n                    initial={{ height: 0, opacity: 0 }}\n                    animate={{ height: 'auto', opacity: 1 }}\n                    exit={{ height: 0, opacity: 0 }}\n                    transition={reduce ? { duration: 0 } : { type: 'spring', stiffness: 220, damping: 26 }}\n                    className={c.clip}\n                  >\n                    <div className={c.content}>{item.content}</div>\n                  </motion.div>\n                )}\n              </AnimatePresence>\n            </div>\n          </div>\n        );\n      })}\n    </div>\n  );\n}\n"
+		}
+	],
+	"registryDependencies": [],
+	"dependencies": [
+		"motion@^12.23.12"
+	],
+	"meta": {
+		"origin": "local",
+		"style": "Editorial / 黑白编辑排版",
+		"docsUrl": "http://localhost:5290/micro/spring-accordion"
+	}
+}

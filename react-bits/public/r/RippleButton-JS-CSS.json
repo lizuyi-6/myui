@@ -1,0 +1,30 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "RippleButton-JS-CSS",
+	"title": "RippleButton",
+	"description": "Warm tactile button with pointer-origin ripples, centered keyboard feedback and bounded animation nodes.",
+	"type": "registry:component",
+	"files": [
+		{
+			"type": "registry:file",
+			"path": "RippleButton.css",
+			"target": "@components/RippleButton.css",
+			"content": ".lc-ripple-button-root {\n  box-sizing: border-box;\n  min-width: 0;\n  max-width: 100%;\n  color: var(--lc-ink);\n  font-family: inherit;\n  min-height: 44px;\n  cursor: pointer;\n  position: relative;\n  isolation: isolate;\n  overflow: hidden;\n  border-top-width: 1px;\n  border-top-style: solid;\n  border-top-color: var(--lc-accent);\n  border-right-width: 1px;\n  border-right-style: solid;\n  border-right-color: var(--lc-accent);\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  border-bottom-color: var(--lc-accent);\n  border-left-width: 1px;\n  border-left-style: solid;\n  border-left-color: var(--lc-accent);\n  border-radius: 18px;\n  background: var(--lc-surface);\n  padding: 16px 28px;\n  font-size: 15px;\n  font-weight: 700;\n  box-shadow: 0 5px 0 color-mix(in srgb, var(--lc-accent) 35%, transparent);\n}\n.lc-ripple-button-root:focus-visible {\n  outline: 2px solid var(--lc-accent);\n  outline-offset: 4px;\n}\n.lc-ripple-button-root:disabled {\n  cursor: not-allowed;\n  opacity: 0.45;\n}\n.lc-ripple-button-ripple {\n  position: absolute;\n  z-index: -1;\n  pointer-events: none;\n  border-radius: 50%;\n  background: var(--lc-accent);\n}\n.lc-ripple-button-content {\n  position: relative;\n}\n"
+		},
+		{
+			"type": "registry:component",
+			"path": "RippleButton.jsx",
+			"target": "@components/RippleButton.jsx",
+			"content": "'use client';\nimport { useState, useRef, useSyncExternalStore } from 'react';\nimport { motion } from 'motion/react';\nimport './RippleButton.css';\nconst c = { root: 'lc-ripple-button-root', ripple: 'lc-ripple-button-ripple', content: 'lc-ripple-button-content' };\nconst motionQuery = '(prefers-reduced-motion: reduce)';\nconst motionSnapshot = () => typeof window !== 'undefined' && window.matchMedia(motionQuery).matches;\nconst motionSubscribe = (listener) => {\n  const media = window.matchMedia(motionQuery);\n  media.addEventListener('change', listener);\n  return () => media.removeEventListener('change', listener);\n};\nfunction useMotionPreference() {\n  return useSyncExternalStore(motionSubscribe, motionSnapshot, () => false);\n}\nexport default function RippleButton({\n  children = 'Make a ripple',\n  onClick,\n  disabled = false,\n  ariaLabel,\n  accent = '#ef7848',\n  surface = '#fff0e6',\n  ink = '#64331e',\n  className = ''\n}) {\n  const reduce = useMotionPreference();\n  const nextId = useRef(0);\n  const [ripples, setRipples] = useState([]);\n  const click = (event) => {\n    if (!reduce) {\n      const rect = event.currentTarget.getBoundingClientRect();\n      const size = Math.hypot(rect.width, rect.height) * 2;\n      const ripple = {\n        id: nextId.current++,\n        size,\n        x: event.detail === 0 ? rect.width / 2 : event.clientX - rect.left,\n        y: event.detail === 0 ? rect.height / 2 : event.clientY - rect.top\n      };\n      setRipples((previous) => [...previous.slice(-5), ripple]);\n    }\n    onClick?.(event);\n  };\n  return (\n    <motion.button\n      className={[c.root, className].filter(Boolean).join(' ')}\n      style={{ '--lc-accent': accent, '--lc-surface': surface, '--lc-ink': ink }}\n      type=\"button\"\n      disabled={disabled}\n      aria-label={ariaLabel}\n      onClick={click}\n      whileHover={reduce || disabled ? undefined : { y: -3 }}\n      whileTap={reduce || disabled ? undefined : { scale: 0.95 }}\n      transition={{ type: 'spring', stiffness: 400, damping: 24 }}\n    >\n      {ripples.map((ripple) => (\n        <motion.span\n          key={ripple.id}\n          aria-hidden=\"true\"\n          className={c.ripple}\n          style={{\n            left: ripple.x - ripple.size / 2,\n            top: ripple.y - ripple.size / 2,\n            width: ripple.size,\n            height: ripple.size\n          }}\n          initial={{ scale: 0, opacity: 0.5 }}\n          animate={{ scale: 1, opacity: 0 }}\n          transition={{ duration: 0.65 }}\n          onAnimationComplete={() => setRipples((previous) => previous.filter((item) => item.id !== ripple.id))}\n        />\n      ))}\n      <span className={c.content}>{children}</span>\n    </motion.button>\n  );\n}\n"
+		}
+	],
+	"registryDependencies": [],
+	"dependencies": [
+		"motion@^12.23.12"
+	],
+	"meta": {
+		"origin": "local",
+		"style": "Warm tactile / 暖色触感",
+		"docsUrl": "http://localhost:5290/micro/ripple-button"
+	}
+}

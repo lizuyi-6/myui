@@ -1,0 +1,77 @@
+.lc-arcade-button-root {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--lc-ink);
+  font-family: monospace;
+  width: min(100%, 300px);
+  padding: 24px;
+  background: var(--lc-surface);
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: var(--lc-ink);
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: var(--lc-ink);
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--lc-ink);
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: var(--lc-ink);
+}
+.lc-arcade-button-topline {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.lc-arcade-button-key {
+  box-sizing: border-box;
+  min-height: 72px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  position: relative;
+  width: 100%;
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: var(--lc-ink);
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: var(--lc-ink);
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--lc-ink);
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: var(--lc-ink);
+  border-radius: 0;
+  background: var(--lc-accent);
+  box-shadow: 6px 8px 0 var(--lc-ink);
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.lc-arcade-button-key:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-arcade-button-key:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.lc-arcade-button-star {
+  font-size: 28px;
+}
+.lc-arcade-button-bottomline {
+  margin-top: 26px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-align: center;
+}

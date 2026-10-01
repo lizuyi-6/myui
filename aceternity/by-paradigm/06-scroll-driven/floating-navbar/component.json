@@ -1,0 +1,52 @@
+{
+  "name": "floating-navbar",
+  "title": "Floating Navbar",
+  "kind": "components",
+  "description": "A sticky Navbar that hides on scroll, reveals when scrolled up.",
+  "categories": [
+    "navbar",
+    "utility"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/floating-navbar",
+  "files": [
+    "components/ui/floating-navbar.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "06-scroll-driven",
+  "signals": {
+    "loc": 89,
+    "files": 1,
+    "motion_apis": [
+      "AnimatePresence",
+      "useScroll",
+      "useMotionValueEvent"
+    ],
+    "react_hooks": [
+      "useState"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 1,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 1,
+    "dark_classes": 10,
+    "arbitrary_values": 1,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 2,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 2
+  }
+}

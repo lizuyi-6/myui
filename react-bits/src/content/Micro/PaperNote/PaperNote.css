@@ -1,0 +1,111 @@
+.lc-paper-note-root {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--lc-ink);
+  font-family: inherit;
+  position: relative;
+  width: min(100%, 300px);
+  padding: 24px 24px 20px;
+  background: var(--lc-surface);
+  box-shadow: 4px 12px 22px #48341326;
+  border-radius: 2px;
+}
+.lc-paper-note-tape {
+  position: absolute;
+  width: 92px;
+  height: 26px;
+  top: -12px;
+  left: calc(50% - 46px);
+  transform: rotate(4deg);
+  background: #ffffff88;
+  border-left-width: 2px;
+  border-left-style: dotted;
+  border-left-color: #c8bb8980;
+  border-right-width: 2px;
+  border-right-style: dotted;
+  border-right-color: #c8bb8980;
+}
+.lc-paper-note-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font:
+    italic 15px Georgia,
+    serif;
+}
+.lc-paper-note-pin {
+  box-sizing: border-box;
+  min-height: 44px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-accent);
+  width: 44px;
+  border-top-width: 0;
+  border-top-style: undefined;
+  border-top-color:;
+  border-right-width: 0;
+  border-right-style: undefined;
+  border-right-color:;
+  border-bottom-width: 0;
+  border-bottom-style: undefined;
+  border-bottom-color:;
+  border-left-width: 0;
+  border-left-style: undefined;
+  border-left-color:;
+  background: transparent;
+  font-size: 22px;
+}
+.lc-paper-note-pin:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-paper-note-text {
+  box-sizing: border-box;
+  display: block;
+  resize: vertical;
+  width: 100%;
+  min-height: 144px;
+  max-height: 360px;
+  border-top-width: 0;
+  border-top-style: undefined;
+  border-top-color:;
+  border-right-width: 0;
+  border-right-style: undefined;
+  border-right-color:;
+  border-bottom-width: 0;
+  border-bottom-style: undefined;
+  border-bottom-color:;
+  border-left-width: 0;
+  border-left-style: undefined;
+  border-left-color:;
+  padding: 4px 0;
+  margin-top: 10px;
+  background: repeating-linear-gradient(transparent, transparent 31px, #b7a95355 31px, #b7a95355 32px);
+  color: var(--lc-ink);
+  font:
+    italic 20px/32px Georgia,
+    serif;
+}
+.lc-paper-note-text:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-paper-note-fold {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top-width: 22px;
+  border-top-style: solid;
+  border-top-color: #d5bf67;
+  border-right-width: 22px;
+  border-right-style: solid;
+  border-right-color: transparent;
+}
+.lc-paper-note-footer {
+  margin-top: 16px;
+  font: 10px monospace;
+  color: var(--lc-accent);
+}

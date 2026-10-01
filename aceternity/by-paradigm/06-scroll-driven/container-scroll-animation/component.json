@@ -1,0 +1,57 @@
+{
+  "name": "container-scroll-animation",
+  "title": "Container Scroll Animation",
+  "kind": "components",
+  "description": "A scroll animation that rotates in 3d on scroll. Perfect for hero or marketing sections.",
+  "categories": [
+    "hero",
+    "product",
+    "features"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/container-scroll-animation",
+  "files": [
+    "components/ui/container-scroll-animation.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "06-scroll-driven",
+  "signals": {
+    "loc": 96,
+    "files": 1,
+    "motion_apis": [
+      "useScroll",
+      "useTransform",
+      "MotionValue"
+    ],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 2,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 0,
+    "dark_classes": 1,
+    "arbitrary_values": 7,
+    "event_listeners": [
+      "resize"
+    ],
+    "raf": false,
+    "cn_calls": 0,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

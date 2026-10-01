@@ -1,0 +1,30 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "RibbonBadge-TS-CSS",
+	"title": "RibbonBadge",
+	"description": "A vintage folded ribbon badge that reveals supporting content with an accessible disclosure button.",
+	"type": "registry:component",
+	"files": [
+		{
+			"type": "registry:file",
+			"path": "RibbonBadge.css",
+			"target": "@components/RibbonBadge.css",
+			"content": ".lc-ribbon-badge-root {\n  box-sizing: border-box;\n  min-width: 0;\n  max-width: 100%;\n  color: var(--lc-ink);\n  font-family: inherit;\n  position: relative;\n  isolation: isolate;\n  width: min(100%, 320px);\n  padding: 18px;\n  background: var(--lc-surface);\n  text-align: center;\n}\n.lc-ribbon-badge-ribbon {\n  box-sizing: border-box;\n  min-height: 58px;\n  font-family: inherit;\n  cursor: pointer;\n  color: #fff8e9;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  gap: 12px;\n  width: 100%;\n  padding: 12px;\n  border-top-width: 1px;\n  border-top-style: dashed;\n  border-top-color: #ffffff88;\n  border-right-width: 1px;\n  border-right-style: dashed;\n  border-right-color: #ffffff88;\n  border-bottom-width: 1px;\n  border-bottom-style: dashed;\n  border-bottom-color: #ffffff88;\n  border-left-width: 1px;\n  border-left-style: dashed;\n  border-left-color: #ffffff88;\n  background: var(--lc-accent);\n  outline: 5px solid var(--lc-accent);\n  font:\n    700 12px Georgia,\n    serif;\n  letter-spacing: 1px;\n}\n.lc-ribbon-badge-ribbon:focus-visible {\n  outline: 3px solid var(--lc-ink);\n  outline-offset: 8px;\n}\n.lc-ribbon-badge-tailleft {\n  position: absolute;\n  z-index: -1;\n  top: 33px;\n  left: 0;\n  width: 40px;\n  height: 52px;\n  background: color-mix(in srgb, var(--lc-accent) 70%, #281c14);\n  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 22% 50%);\n}\n.lc-ribbon-badge-tailright {\n  position: absolute;\n  z-index: -1;\n  top: 33px;\n  right: 0;\n  width: 40px;\n  height: 52px;\n  background: color-mix(in srgb, var(--lc-accent) 70%, #281c14);\n  clip-path: polygon(0 0, 100% 0, 78% 50%, 100% 100%, 0 100%);\n}\n.lc-ribbon-badge-detail {\n  overflow: hidden;\n}\n.lc-ribbon-badge-inner {\n  padding: 28px 12px 6px;\n  font:\n    italic 17px/1.7 Georgia,\n    serif;\n}\n"
+		},
+		{
+			"type": "registry:component",
+			"path": "RibbonBadge.tsx",
+			"target": "@components/RibbonBadge.tsx",
+			"content": "'use client';\nimport { useState, useId, useSyncExternalStore } from 'react';\nimport type { CSSProperties, ReactNode } from 'react';\nimport { motion, AnimatePresence } from 'motion/react';\nimport './RibbonBadge.css';\nconst c = {\n  root: 'lc-ribbon-badge-root',\n  ribbon: 'lc-ribbon-badge-ribbon',\n  tailleft: 'lc-ribbon-badge-tailleft',\n  tailright: 'lc-ribbon-badge-tailright',\n  detail: 'lc-ribbon-badge-detail',\n  inner: 'lc-ribbon-badge-inner'\n};\n\nexport interface RibbonBadgeProps {\n  label?: string;\n  detail?: ReactNode;\n  defaultOpen?: boolean;\n  onChange?: (open: boolean) => void;\n  accent?: string;\n  surface?: string;\n  ink?: string;\n  className?: string;\n}\n\nconst motionQuery = '(prefers-reduced-motion: reduce)';\nconst motionSnapshot = () => typeof window !== 'undefined' && window.matchMedia(motionQuery).matches;\nconst motionSubscribe = (listener: () => void) => {\n  const media = window.matchMedia(motionQuery);\n  media.addEventListener('change', listener);\n  return () => media.removeEventListener('change', listener);\n};\nfunction useMotionPreference() {\n  return useSyncExternalStore(motionSubscribe, motionSnapshot, () => false);\n}\n\nexport default function RibbonBadge({\n  label = 'A LITTLE EXTRA',\n  detail = 'Made with care. Kept with love.',\n  defaultOpen = false,\n  onChange,\n  accent = '#ad473e',\n  surface = '#fff3e7',\n  ink = '#603b32',\n  className = ''\n}: RibbonBadgeProps) {\n  const id = useId();\n  const reduce = useMotionPreference();\n  const [open, setOpen] = useState(defaultOpen);\n  return (\n    <div\n      className={[c.root, className].filter(Boolean).join(' ')}\n      style={{ '--lc-accent': accent, '--lc-surface': surface, '--lc-ink': ink } as CSSProperties}\n    >\n      <span aria-hidden=\"true\" className={c.tailleft} />\n      <span aria-hidden=\"true\" className={c.tailright} />\n      <button\n        type=\"button\"\n        className={c.ribbon}\n        aria-expanded={open}\n        aria-controls={id}\n        onClick={() => {\n          setOpen((previous) => !previous);\n          onChange?.(!open);\n        }}\n      >\n        <span aria-hidden=\"true\">✷</span>\n        {label}\n        <span aria-hidden=\"true\">✷</span>\n      </button>\n      <div id={id} aria-hidden={!open} inert={!open}>\n        <AnimatePresence initial={false}>\n          {open && (\n            <motion.div\n              className={c.detail}\n              initial={{ height: 0, opacity: 0 }}\n              animate={{ height: 'auto', opacity: 1 }}\n              exit={{ height: 0, opacity: 0 }}\n              transition={{ duration: reduce ? 0 : 0.28 }}\n            >\n              <div className={c.inner}>{detail}</div>\n            </motion.div>\n          )}\n        </AnimatePresence>\n      </div>\n    </div>\n  );\n}\n"
+		}
+	],
+	"registryDependencies": [],
+	"dependencies": [
+		"motion@^12.23.12"
+	],
+	"meta": {
+		"origin": "local",
+		"style": "Vintage ribbon / 复古绶带",
+		"docsUrl": "http://localhost:5290/micro/ribbon-badge"
+	}
+}

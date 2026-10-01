@@ -1,0 +1,48 @@
+{
+  "name": "bento-grid",
+  "title": "Bento Grid",
+  "kind": "components",
+  "description": "A skewed grid layout with Title, description and a header component",
+  "categories": [
+    "card",
+    "grid",
+    "hover",
+    "features"
+  ],
+  "dependencies": [
+    "@tabler/icons-react"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/bento-grid",
+  "files": [
+    "components/ui/bento-grid.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "01-static-visual",
+  "signals": {
+    "loc": 55,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 0,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 1,
+    "blur": 0,
+    "dark_classes": 5,
+    "arbitrary_values": 1,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 2,
+    "use_client": false,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

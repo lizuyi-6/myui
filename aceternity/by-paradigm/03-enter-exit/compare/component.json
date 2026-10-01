@@ -1,0 +1,59 @@
+{
+  "name": "compare",
+  "title": "Compare",
+  "kind": "components",
+  "description": "A comparison component between two images, slide or drag to compare",
+  "categories": [
+    "card",
+    "features",
+    "special"
+  ],
+  "dependencies": [
+    "@tabler/icons-react",
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/compare",
+  "files": [
+    "components/ui/compare.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 241,
+    "files": 1,
+    "motion_apis": [
+      "AnimatePresence"
+    ],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef",
+      "useCallback"
+    ],
+    "pkgs": [
+      "@tabler/icons-react"
+    ],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 3,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 17,
+    "blur": 0,
+    "dark_classes": 0,
+    "arbitrary_values": 6,
+    "event_listeners": [],
+    "raf": true,
+    "cn_calls": 4,
+    "use_client": true,
+    "interfaces": [
+      "CompareProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 3
+  }
+}

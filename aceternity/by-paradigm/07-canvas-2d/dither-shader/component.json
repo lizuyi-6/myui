@@ -1,0 +1,54 @@
+{
+  "name": "dither-shader",
+  "title": "Dither Shader",
+  "kind": "components",
+  "description": "A real-time ordered dithering effect for images, perfect for pixel art and retro aesthetics.",
+  "categories": [
+    "card",
+    "background",
+    "gradient",
+    "special",
+    "call to action"
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/dither-shader",
+  "files": [
+    "components/ui/dither-shader.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "07-canvas-2d",
+  "signals": {
+    "loc": 461,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef",
+      "useCallback"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 0,
+    "animate_classes": [],
+    "canvas2d": true,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 0,
+    "dark_classes": 0,
+    "arbitrary_values": 0,
+    "event_listeners": [],
+    "raf": true,
+    "cn_calls": 1,
+    "use_client": true,
+    "interfaces": [
+      "DitherShaderProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

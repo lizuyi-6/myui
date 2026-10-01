@@ -1,0 +1,63 @@
+{
+  "name": "card-spotlight",
+  "title": "Card Spotlight",
+  "kind": "components",
+  "description": "A card component with a spotlight effect revealing a radial gradient background",
+  "categories": [
+    "card",
+    "features",
+    "special"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "canvas-reveal-effect"
+  ],
+  "documentationUrl": "https://ui.aceternity.com/components/card-spotlight",
+  "files": [
+    "components/ui/card-spotlight.tsx",
+    "components/ui/canvas-reveal-effect.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "09-webgl-shader",
+  "signals": {
+    "loc": 384,
+    "files": 2,
+    "motion_apis": [
+      "useMotionValue",
+      "useMotionTemplate"
+    ],
+    "react_hooks": [
+      "useRef",
+      "useMemo",
+      "useState"
+    ],
+    "pkgs": [
+      "three",
+      "@react-three/fiber"
+    ],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 1,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": true,
+    "tsparticles": false,
+    "gradients": 4,
+    "blur": 0,
+    "dark_classes": 1,
+    "arbitrary_values": 1,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 2,
+    "use_client": true,
+    "interfaces": [
+      "DotMatrixProps",
+      "ShaderProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

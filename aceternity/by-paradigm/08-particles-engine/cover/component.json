@@ -1,0 +1,60 @@
+{
+  "name": "cover",
+  "title": "Cover",
+  "kind": "components",
+  "description": "cover component for React/Next.js",
+  "categories": [],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "sparkles"
+  ],
+  "documentationUrl": "https://ui.aceternity.com/components/cover",
+  "files": [
+    "components/ui/cover.tsx",
+    "components/ui/sparkles.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "08-particles-engine",
+  "signals": {
+    "loc": 664,
+    "files": 2,
+    "motion_apis": [
+      "AnimatePresence"
+    ],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef",
+      "useId",
+      "useMemo"
+    ],
+    "pkgs": [
+      "@tsparticles/react"
+    ],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 1,
+    "motion_elements": 7,
+    "animate_classes": [
+      "animate-pulse"
+    ],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": true,
+    "gradients": 0,
+    "blur": 2,
+    "dark_classes": 3,
+    "arbitrary_values": 9,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 5,
+    "use_client": true,
+    "interfaces": [
+      "ParticlesProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 9
+  }
+}

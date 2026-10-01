@@ -1,0 +1,2 @@
+# Preserve exact source copies and generated payload bytes across checkouts.
+* -text

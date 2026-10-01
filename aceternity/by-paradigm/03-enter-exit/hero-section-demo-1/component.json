@@ -1,0 +1,41 @@
+{
+  "name": "hero-section-demo-1",
+  "title": "Hero Section Demo 1",
+  "kind": "blocks",
+  "description": null,
+  "categories": [],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": null,
+  "files": [
+    "components/hero-section-demo-1.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 119,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 4,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 19,
+    "blur": 2,
+    "dark_classes": 19,
+    "arbitrary_values": 1,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 0,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 8
+  }
+}

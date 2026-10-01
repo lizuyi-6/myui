@@ -1,0 +1,47 @@
+{
+  "name": "meteors",
+  "title": "Meteor Effect",
+  "kind": "components",
+  "description": "A group of beams in the background of a container, sort of like meteors.",
+  "categories": [
+    "card",
+    "testimonial",
+    "special"
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/meteors",
+  "files": [
+    "components/ui/meteors.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 45,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 1,
+    "animate_classes": [
+      "animate-meteor-effect"
+    ],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 4,
+    "blur": 0,
+    "dark_classes": 0,
+    "arbitrary_values": 8,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 1,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 2
+  }
+}

@@ -1,0 +1,125 @@
+.lc-depth-lift-card-root {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--lc-ink);
+  font-family: inherit;
+  width: min(100%, 400px);
+  perspective: 900px;
+  padding: 30px 16px;
+}
+.lc-depth-lift-card-card {
+  position: relative;
+  min-height: 355px;
+  padding: 26px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #af9aff55;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #af9aff55;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #af9aff55;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #af9aff55;
+  border-radius: 24px;
+  background: var(--lc-surface);
+  transform-style: preserve-3d;
+  box-shadow: 0 25px 70px #00000050;
+}
+.lc-depth-lift-card-glow {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--lc-accent), transparent 70%);
+  opacity: 0.22;
+  pointer-events: none;
+}
+.lc-depth-lift-card-label {
+  position: relative;
+  font: 10px monospace;
+  letter-spacing: 3px;
+  color: var(--lc-accent);
+}
+.lc-depth-lift-card-orbits {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 180px;
+  transform-style: preserve-3d;
+}
+.lc-depth-lift-card-ring {
+  position: absolute;
+  width: 180px;
+  height: 90px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--lc-accent);
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: var(--lc-accent);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--lc-accent);
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: var(--lc-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 20px #af9aff22;
+}
+.lc-depth-lift-card-core {
+  font-size: 66px;
+  color: var(--lc-accent);
+  text-shadow: 0 0 24px var(--lc-accent);
+}
+.lc-depth-lift-card-foreground {
+  position: relative;
+  transform-style: preserve-3d;
+}
+.lc-depth-lift-card-title {
+  margin: 0 0 10px;
+  font-size: 28px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+.lc-depth-lift-card-copy {
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+.lc-depth-lift-card-trigger {
+  box-sizing: border-box;
+  min-height: 44px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-ink);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px 0 0;
+  margin-top: 14px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #af9aff44;
+  border-right-width: 0;
+  border-right-style: undefined;
+  border-right-color:;
+  border-bottom-width: 0;
+  border-bottom-style: undefined;
+  border-bottom-color:;
+  border-left-width: 0;
+  border-left-style: undefined;
+  border-left-color:;
+  background: transparent;
+  font-size: 12px;
+}
+.lc-depth-lift-card-trigger:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}

@@ -1,0 +1,43 @@
+{
+  "name": "lamp",
+  "title": "Lamp",
+  "kind": "components",
+  "description": "lamp component for React/Next.js",
+  "categories": [],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/lamp",
+  "files": [
+    "components/ui/lamp.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 105,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 5,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 12,
+    "blur": 4,
+    "dark_classes": 0,
+    "arbitrary_values": 11,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 1,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 5
+  }
+}

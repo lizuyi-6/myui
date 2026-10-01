@@ -1,0 +1,63 @@
+{
+  "name": "resizable-navbar",
+  "title": "Resizable Navbar",
+  "kind": "components",
+  "description": "A navbar that changes width on scroll, responsive and animated.",
+  "categories": [
+    "navbar",
+    "responsive",
+    "navigation",
+    "layout"
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/resizable-navbar",
+  "files": [
+    "components/ui/resizable-navbar.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "06-scroll-driven",
+  "signals": {
+    "loc": 289,
+    "files": 1,
+    "motion_apis": [
+      "AnimatePresence",
+      "useScroll",
+      "useMotionValueEvent",
+      "layoutId"
+    ],
+    "react_hooks": [
+      "useState",
+      "useRef"
+    ],
+    "pkgs": [
+      "@tabler/icons-react"
+    ],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 6,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 4,
+    "blur": 2,
+    "dark_classes": 11,
+    "arbitrary_values": 6,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 7,
+    "use_client": true,
+    "interfaces": [
+      "NavbarProps",
+      "NavBodyProps",
+      "NavItemsProps",
+      "MobileNavProps",
+      "MobileNavHeaderProps",
+      "MobileNavMenuProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 5
+  }
+}

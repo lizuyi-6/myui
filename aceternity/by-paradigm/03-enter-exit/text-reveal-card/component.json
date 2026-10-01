@@ -1,0 +1,56 @@
+{
+  "name": "text-reveal-card",
+  "title": "Text Reveal Card",
+  "kind": "components",
+  "description": "Mousemove effect to reveal text content at the bottom of the card.",
+  "categories": [
+    "text",
+    "content",
+    "hero",
+    "section",
+    "special",
+    "card"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/text-reveal-card",
+  "files": [
+    "components/ui/text-reveal-card.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 188,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef"
+    ],
+    "pkgs": [
+      "tailwind-merge"
+    ],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 3,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 9,
+    "blur": 0,
+    "dark_classes": 0,
+    "arbitrary_values": 8,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 1,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 3
+  }
+}

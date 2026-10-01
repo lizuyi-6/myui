@@ -1,0 +1,46 @@
+{
+  "name": "focus-cards",
+  "title": "Focus Cards",
+  "kind": "components",
+  "description": "Hover over the card to focus on it, blurring the rest of the cards.",
+  "categories": [
+    "cards",
+    "ui"
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/focus-cards",
+  "files": [
+    "components/ui/focus-cards.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "01-static-visual",
+  "signals": {
+    "loc": 69,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useState"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 0,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 4,
+    "blur": 1,
+    "dark_classes": 1,
+    "arbitrary_values": 1,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 2,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

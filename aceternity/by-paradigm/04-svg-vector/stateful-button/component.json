@@ -1,0 +1,51 @@
+{
+  "name": "stateful-button",
+  "title": "Stateful Button",
+  "kind": "components",
+  "description": "A button that shows a loading state when clicked, and a success state when the action is completed.",
+  "categories": [
+    "button",
+    "stateful",
+    "loading"
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/stateful-button",
+  "files": [
+    "components/ui/stateful-button.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "04-svg-vector",
+  "signals": {
+    "loc": 169,
+    "files": 1,
+    "motion_apis": [
+      "AnimatePresence",
+      "useAnimate",
+      "layoutId"
+    ],
+    "react_hooks": [],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 5,
+    "svg_filters": 0,
+    "motion_elements": 5,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 0,
+    "dark_classes": 1,
+    "arbitrary_values": 1,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 1,
+    "use_client": true,
+    "interfaces": [
+      "ButtonProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 3
+  }
+}

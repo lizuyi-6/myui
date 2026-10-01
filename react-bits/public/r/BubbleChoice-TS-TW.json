@@ -1,0 +1,24 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "BubbleChoice-TS-TW",
+	"title": "BubbleChoice",
+	"description": "Candy-colored native radio group with round labels and a spring bubble around the selected choice.",
+	"type": "registry:component",
+	"files": [
+		{
+			"type": "registry:component",
+			"path": "BubbleChoice.tsx",
+			"target": "@components/BubbleChoice.tsx",
+			"content": "'use client';\nimport { useState, useId, useSyncExternalStore } from 'react';\nimport type { CSSProperties } from 'react';\nimport { motion } from 'motion/react';\n\nconst c = {\n  root: '[box-sizing:border-box] [min-width:0] [max-width:100%] [color:var(--lc-ink)] [font-family:inherit] [width:min(100%,380px)] [padding:20px] [border-top-width:2px] [border-top-style:solid] [border-top-color:#e8bad1] [border-right-width:2px] [border-right-style:solid] [border-right-color:#e8bad1] [border-bottom-width:2px] [border-bottom-style:solid] [border-bottom-color:#e8bad1] [border-left-width:2px] [border-left-style:solid] [border-left-color:#e8bad1] [border-radius:32px] [background:var(--lc-surface)]',\n  legend: '[padding:0_10px] [font-size:18px] [font-weight:800] [color:var(--lc-ink)]',\n  options: '[display:flex] [flex-wrap:wrap] [justify-content:center] [gap:12px]',\n  option:\n    '[display:flex] [flex:1] [min-width:76px] [flex-direction:column] [align-items:center] [gap:10px] [cursor:pointer]',\n  bubble:\n    '[display:flex] [align-items:center] [justify-content:center] [width:70px] [height:70px] [border-radius:40%_55%_45%_50%] [font-size:34px] [box-shadow:inset_0_-5px_0_#0000000a]',\n  optionlabel: '[display:flex] [align-items:center] [gap:5px] [font-size:12px] [font-weight:600]',\n  radio:\n    '[width:16px] [height:16px] [accent-color:var(--lc-accent)] focus-visible:[outline:2px_solid_var(--lc-accent)] focus-visible:[outline-offset:4px]'\n};\n\nexport interface BubbleChoiceProps {\n  options?: string[];\n  value?: string;\n  defaultValue?: string;\n  onChange?: (value: string) => void;\n  label?: string;\n  accent?: string;\n  surface?: string;\n  ink?: string;\n  className?: string;\n}\n\nconst motionQuery = '(prefers-reduced-motion: reduce)';\nconst motionSnapshot = () => typeof window !== 'undefined' && window.matchMedia(motionQuery).matches;\nconst motionSubscribe = (listener: () => void) => {\n  const media = window.matchMedia(motionQuery);\n  media.addEventListener('change', listener);\n  return () => media.removeEventListener('change', listener);\n};\nfunction useMotionPreference() {\n  return useSyncExternalStore(motionSubscribe, motionSnapshot, () => false);\n}\n\nexport default function BubbleChoice({\n  options = ['Peach', 'Mint', 'Lavender'],\n  value,\n  defaultValue = 'Peach',\n  onChange,\n  label = 'Pick your mood',\n  accent = '#c74f91',\n  surface = '#fff0f7',\n  ink = '#63334d',\n  className = ''\n}: BubbleChoiceProps) {\n  const id = useId();\n  const reduce = useMotionPreference();\n  const [inner, setInner] = useState(defaultValue);\n  const active = value ?? inner;\n  return (\n    <fieldset\n      className={[c.root, className].filter(Boolean).join(' ')}\n      style={{ '--lc-accent': accent, '--lc-surface': surface, '--lc-ink': ink } as CSSProperties}\n    >\n      <legend className={c.legend}>{label}</legend>\n      <div className={c.options}>\n        {options.map((option, index) => (\n          <label key={option} className={c.option}>\n            <motion.span\n              aria-hidden=\"true\"\n              className={c.bubble}\n              style={{ background: ['#ffd5b8', '#caf0de', '#dfd2f4'][index % 3] }}\n              animate={{ scale: active === option ? 1 : 0.75, y: active === option && !reduce ? -4 : 0 }}\n              transition={reduce ? { duration: 0 } : { type: 'spring', stiffness: 290, damping: 17 }}\n            >\n              {['✿', '✳', '✦'][index % 3]}\n            </motion.span>\n            <span className={c.optionlabel}>\n              <input\n                className={c.radio}\n                type=\"radio\"\n                name={id}\n                value={option}\n                checked={active === option}\n                onChange={() => {\n                  if (value === undefined) setInner(option);\n                  onChange?.(option);\n                }}\n              />\n              {option}\n            </span>\n          </label>\n        ))}\n      </div>\n    </fieldset>\n  );\n}\n"
+		}
+	],
+	"registryDependencies": [],
+	"dependencies": [
+		"motion@^12.23.12"
+	],
+	"meta": {
+		"origin": "local",
+		"style": "Candy pop / 糖果气泡",
+		"docsUrl": "http://localhost:5290/micro/bubble-choice"
+	}
+}

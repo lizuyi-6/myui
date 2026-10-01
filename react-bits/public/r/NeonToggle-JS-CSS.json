@@ -1,0 +1,30 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "NeonToggle-JS-CSS",
+	"title": "NeonToggle",
+	"description": "Hardware-inspired switch with a luminous LED lane, etched ticks and a spring slider.",
+	"type": "registry:component",
+	"files": [
+		{
+			"type": "registry:file",
+			"path": "NeonToggle.css",
+			"target": "@components/NeonToggle.css",
+			"content": ".lc-neon-toggle-root {\n  box-sizing: border-box;\n  min-width: 0;\n  max-width: 100%;\n  color: var(--lc-ink);\n  font-family: monospace;\n  width: min(100%, 250px);\n  padding: 24px;\n  background: var(--lc-surface);\n  border-top-width: 1px;\n  border-top-style: solid;\n  border-top-color: #5b75634d;\n  border-right-width: 1px;\n  border-right-style: solid;\n  border-right-color: #5b75634d;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  border-bottom-color: #5b75634d;\n  border-left-width: 1px;\n  border-left-style: solid;\n  border-left-color: #5b75634d;\n  border-radius: 8px;\n  box-shadow: inset 0 1px 0 #ffffff12;\n}\n.lc-neon-toggle-header {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 20px;\n  font-size: 11px;\n  letter-spacing: 2px;\n}\n.lc-neon-toggle-state {\n  font-size: 10px;\n  color: var(--lc-accent);\n  letter-spacing: 0;\n}\n.lc-neon-toggle-track {\n  box-sizing: border-box;\n  min-height: 44px;\n  font-family: inherit;\n  cursor: pointer;\n  color: var(--lc-ink);\n  position: relative;\n  display: block;\n  width: 154px;\n  height: 62px;\n  margin: auto;\n  border-top-width: 1px;\n  border-top-style: solid;\n  border-top-color: #354b3d;\n  border-right-width: 1px;\n  border-right-style: solid;\n  border-right-color: #354b3d;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  border-bottom-color: #354b3d;\n  border-left-width: 1px;\n  border-left-style: solid;\n  border-left-color: #354b3d;\n  border-radius: 7px;\n  background: #080e0b;\n  box-shadow: inset 0 3px 8px #00000080;\n}\n.lc-neon-toggle-track:focus-visible {\n  outline: 2px solid var(--lc-accent);\n  outline-offset: 4px;\n}\n.lc-neon-toggle-track:disabled {\n  opacity: 0.4;\n  cursor: not-allowed;\n}\n.lc-neon-toggle-lane {\n  position: absolute;\n  left: 18px;\n  right: 18px;\n  top: 29px;\n  height: 3px;\n  background: var(--lc-accent);\n  border-radius: 4px;\n}\n.lc-neon-toggle-thumb {\n  position: absolute;\n  top: 5px;\n  left: 5px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 68px;\n  height: 50px;\n  border-radius: 4px;\n  border-top-width: 1px;\n  border-top-style: solid;\n  border-top-color: #749180;\n  border-right-width: 1px;\n  border-right-style: solid;\n  border-right-color: #749180;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  border-bottom-color: #749180;\n  border-left-width: 1px;\n  border-left-style: solid;\n  border-left-color: #749180;\n  background: linear-gradient(#344c3e, #1b2a21);\n  box-shadow: 0 3px 8px #00000080;\n}\n.lc-neon-toggle-grip {\n  font-size: 20px;\n  color: #779280;\n  letter-spacing: 4px;\n}\n.lc-neon-toggle-ticks {\n  margin-top: 12px;\n  text-align: center;\n  font-size: 10px;\n  color: #657e6d;\n}\n"
+		},
+		{
+			"type": "registry:component",
+			"path": "NeonToggle.jsx",
+			"target": "@components/NeonToggle.jsx",
+			"content": "'use client';\nimport { useState, useSyncExternalStore } from 'react';\nimport { motion } from 'motion/react';\nimport './NeonToggle.css';\nconst c = {\n  root: 'lc-neon-toggle-root',\n  header: 'lc-neon-toggle-header',\n  state: 'lc-neon-toggle-state',\n  track: 'lc-neon-toggle-track',\n  lane: 'lc-neon-toggle-lane',\n  thumb: 'lc-neon-toggle-thumb',\n  grip: 'lc-neon-toggle-grip',\n  ticks: 'lc-neon-toggle-ticks'\n};\nconst motionQuery = '(prefers-reduced-motion: reduce)';\nconst motionSnapshot = () => typeof window !== 'undefined' && window.matchMedia(motionQuery).matches;\nconst motionSubscribe = (listener) => {\n  const media = window.matchMedia(motionQuery);\n  media.addEventListener('change', listener);\n  return () => media.removeEventListener('change', listener);\n};\nfunction useMotionPreference() {\n  return useSyncExternalStore(motionSubscribe, motionSnapshot, () => false);\n}\nexport default function NeonToggle({\n  checked,\n  defaultChecked = false,\n  onChange,\n  label = 'SIGNAL',\n  disabled = false,\n  accent = '#a6fa69',\n  surface = '#17201c',\n  ink = '#def6e5',\n  className = ''\n}) {\n  const reduce = useMotionPreference();\n  const [inner, setInner] = useState(defaultChecked);\n  const on = checked ?? inner;\n  return (\n    <div\n      className={[c.root, className].filter(Boolean).join(' ')}\n      style={{ '--lc-accent': accent, '--lc-surface': surface, '--lc-ink': ink }}\n    >\n      <div className={c.header}>\n        <span>{label}</span>\n        <span className={c.state}>{on ? '01 / ON' : '00 / OFF'}</span>\n      </div>\n      <button\n        type=\"button\"\n        role=\"switch\"\n        aria-checked={on}\n        aria-label={label}\n        disabled={disabled}\n        className={c.track}\n        onClick={() => {\n          if (checked === undefined) setInner(!on);\n          onChange?.(!on);\n        }}\n      >\n        <span\n          aria-hidden=\"true\"\n          className={c.lane}\n          style={{ opacity: on ? 1 : 0.18, boxShadow: on ? '0 0 16px ' + accent : 'none' }}\n        />\n        <motion.span\n          aria-hidden=\"true\"\n          className={c.thumb}\n          animate={{ x: on ? 74 : 0 }}\n          transition={reduce ? { duration: 0 } : { type: 'spring', stiffness: 340, damping: 25 }}\n        >\n          <span className={c.grip}>|||</span>\n        </motion.span>\n      </button>\n      <div className={c.ticks} aria-hidden=\"true\">\n        ┊ ┊ ┊ ┊ ┊ ┊ ┊ ┊ ┊ ┊ ┊ ┊\n      </div>\n    </div>\n  );\n}\n"
+		}
+	],
+	"registryDependencies": [],
+	"dependencies": [
+		"motion@^12.23.12"
+	],
+	"meta": {
+		"origin": "local",
+		"style": "Cyber hardware / 霓虹硬件",
+		"docsUrl": "http://localhost:5290/micro/neon-toggle"
+	}
+}

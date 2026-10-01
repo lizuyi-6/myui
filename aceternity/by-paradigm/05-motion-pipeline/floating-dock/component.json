@@ -1,0 +1,59 @@
+{
+  "name": "floating-dock",
+  "title": "Floating Dock",
+  "kind": "components",
+  "description": "A floating dock mac os style component, acts as a navigation bar.",
+  "categories": [
+    "form",
+    "special"
+  ],
+  "dependencies": [
+    "@tabler/icons-react",
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/floating-dock",
+  "files": [
+    "components/ui/floating-dock.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "05-motion-pipeline",
+  "signals": {
+    "loc": 201,
+    "files": 1,
+    "motion_apis": [
+      "AnimatePresence",
+      "useTransform",
+      "useSpring",
+      "useMotionValue",
+      "MotionValue",
+      "layoutId"
+    ],
+    "react_hooks": [
+      "useState",
+      "useRef"
+    ],
+    "pkgs": [
+      "@tabler/icons-react"
+    ],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 6,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 0,
+    "dark_classes": 8,
+    "arbitrary_values": 0,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 2,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 6
+  }
+}

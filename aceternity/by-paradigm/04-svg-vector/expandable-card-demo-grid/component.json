@@ -1,0 +1,54 @@
+{
+  "name": "expandable-card-demo-grid",
+  "title": "Expandable Card Demo Grid",
+  "kind": "blocks",
+  "description": null,
+  "categories": [],
+  "dependencies": [],
+  "registryDependencies": [
+    "use-outside-click"
+  ],
+  "documentationUrl": null,
+  "files": [
+    "components/expandable-card-demo-grid.tsx",
+    "hooks/use-outside-click.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "04-svg-vector",
+  "signals": {
+    "loc": 320,
+    "files": 2,
+    "motion_apis": [
+      "AnimatePresence",
+      "layoutId"
+    ],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef",
+      "useId"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 3,
+    "svg_filters": 0,
+    "motion_elements": 13,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 0,
+    "dark_classes": 7,
+    "arbitrary_values": 3,
+    "event_listeners": [
+      "keydown"
+    ],
+    "raf": false,
+    "cn_calls": 0,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 15
+  }
+}

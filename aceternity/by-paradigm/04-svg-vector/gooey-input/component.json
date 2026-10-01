@@ -1,0 +1,59 @@
+{
+  "name": "gooey-input",
+  "title": "Gooey Input",
+  "kind": "components",
+  "description": "A search-style input that expands with a gooey SVG filter and shared layout animation",
+  "categories": [
+    "utility",
+    "form",
+    "navigation",
+    "special"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/gooey-input",
+  "files": [
+    "components/ui/gooey-input.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "04-svg-vector",
+  "signals": {
+    "loc": 263,
+    "files": 1,
+    "motion_apis": [
+      "layoutId"
+    ],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef",
+      "useMemo",
+      "useCallback",
+      "useId"
+    ],
+    "pkgs": [],
+    "svg_tags": 1,
+    "svg_paths": 1,
+    "svg_filters": 2,
+    "motion_elements": 4,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 7,
+    "dark_classes": 2,
+    "arbitrary_values": 1,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 7,
+    "use_client": true,
+    "interfaces": [
+      "GooeyInputProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 2
+  }
+}

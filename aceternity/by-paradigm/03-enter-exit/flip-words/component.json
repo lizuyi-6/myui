@@ -1,0 +1,56 @@
+{
+  "name": "flip-words",
+  "title": "Flip Words",
+  "kind": "components",
+  "description": "A component that flips through a list of words",
+  "categories": [
+    "text",
+    "hero",
+    "special",
+    "call to action"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/flip-words",
+  "files": [
+    "components/ui/flip-words.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 99,
+    "files": 1,
+    "motion_apis": [
+      "AnimatePresence",
+      "LayoutGroup"
+    ],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef",
+      "useCallback"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 3,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 5,
+    "dark_classes": 1,
+    "arbitrary_values": 0,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 1,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 7
+  }
+}

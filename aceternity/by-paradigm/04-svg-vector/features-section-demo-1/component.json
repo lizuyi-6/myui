@@ -1,0 +1,43 @@
+{
+  "name": "features-section-demo-1",
+  "title": "Features Section Demo 1",
+  "kind": "blocks",
+  "description": null,
+  "categories": [],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": null,
+  "files": [
+    "components/features-section-demo-1.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "04-svg-vector",
+  "signals": {
+    "loc": 140,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useId"
+    ],
+    "pkgs": [],
+    "svg_tags": 2,
+    "svg_paths": 1,
+    "svg_filters": 2,
+    "motion_elements": 0,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 12,
+    "blur": 0,
+    "dark_classes": 8,
+    "arbitrary_values": 0,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 0,
+    "use_client": false,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

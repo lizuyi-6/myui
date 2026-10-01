@@ -1,0 +1,87 @@
+.lc-kinetic-tiles-root {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--lc-ink);
+  font-family: inherit;
+  width: min(100%, 440px);
+  padding: 24px;
+  background: var(--lc-surface);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: var(--lc-ink);
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: var(--lc-ink);
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--lc-ink);
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: var(--lc-ink);
+  box-shadow: 7px 7px 0 var(--lc-ink);
+}
+.lc-kinetic-tiles-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-size: 21px;
+  line-height: 1;
+  letter-spacing: -1px;
+  font-weight: 900;
+}
+.lc-kinetic-tiles-arrow {
+  font-size: 40px;
+}
+.lc-kinetic-tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  perspective: 600px;
+}
+.lc-kinetic-tiles-tile {
+  box-sizing: border-box;
+  min-height: 102px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-ink);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 12px;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: var(--lc-ink);
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: var(--lc-ink);
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--lc-ink);
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: var(--lc-ink);
+  border-radius: 0;
+  box-shadow: 3px 3px 0 var(--lc-ink);
+}
+.lc-kinetic-tiles-tile:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-kinetic-tiles-symbol {
+  font-size: 29px;
+  line-height: 1;
+}
+.lc-kinetic-tiles-label {
+  font: 9px monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  overflow-wrap: anywhere;
+}
+.lc-kinetic-tiles-empty {
+  grid-column: 1/-1;
+  font-size: 13px;
+}

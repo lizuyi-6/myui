@@ -1,0 +1,151 @@
+.lc-scroll-theater-root {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--lc-ink);
+  font-family: inherit;
+  width: min(100%, 500px);
+  background: var(--lc-surface);
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #191c2040;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #191c2040;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #191c2040;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #191c2040;
+}
+.lc-scroll-theater-viewport {
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+.lc-scroll-theater-viewport:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-scroll-theater-track {
+  position: relative;
+}
+.lc-scroll-theater-stage {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  perspective: 700px;
+}
+.lc-scroll-theater-poster {
+  position: absolute;
+  width: 75%;
+  height: 70%;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: var(--lc-ink);
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: var(--lc-ink);
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--lc-ink);
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: var(--lc-ink);
+  background: var(--lc-accent);
+  overflow: hidden;
+}
+.lc-scroll-theater-stripe {
+  position: absolute;
+  inset: 25%;
+  border-top-width: 22px;
+  border-top-style: solid;
+  border-top-color: var(--lc-ink);
+  border-right-width: 22px;
+  border-right-style: solid;
+  border-right-color: var(--lc-ink);
+  border-bottom-width: 22px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--lc-ink);
+  border-left-width: 22px;
+  border-left-style: solid;
+  border-left-color: var(--lc-ink);
+}
+.lc-scroll-theater-disc {
+  position: absolute;
+  right: -30px;
+  bottom: 22px;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: var(--lc-ink);
+}
+.lc-scroll-theater-content {
+  position: relative;
+  padding: 35px;
+  width: 100%;
+  z-index: 1;
+  mix-blend-mode: normal;
+}
+.lc-scroll-theater-number {
+  display: inline-block;
+  background: var(--lc-surface);
+  padding: 6px;
+  font: 10px monospace;
+}
+.lc-scroll-theater-title {
+  margin: 24px 0 16px;
+  max-width: 300px;
+  font-size: clamp(32px, 8vw, 60px);
+  line-height: 0.9;
+  font-weight: 900;
+  letter-spacing: -3px;
+  word-break: normal;
+  text-shadow: 2px 2px var(--lc-surface);
+}
+.lc-scroll-theater-copy {
+  display: inline-block;
+  max-width: 290px;
+  padding: 8px;
+  background: var(--lc-surface);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.lc-scroll-theater-controls {
+  display: flex;
+  gap: 6px;
+  padding: 12px;
+}
+.lc-scroll-theater-scene {
+  box-sizing: border-box;
+  min-height: 44px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-ink);
+  min-width: 44px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--lc-ink);
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: var(--lc-ink);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--lc-ink);
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: var(--lc-ink);
+  background: transparent;
+  font: 12px monospace;
+}
+.lc-scroll-theater-scene:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-scroll-theater-scene[aria-pressed='true'] {
+  background: var(--lc-ink);
+  color: var(--lc-surface);
+}

@@ -1,0 +1,55 @@
+{
+  "name": "placeholders-and-vanish-input",
+  "title": "Placeholders And Vanish Input",
+  "kind": "components",
+  "description": "Sliding in placeholders and vanish effect of input on submit",
+  "categories": [
+    "utility",
+    "form",
+    "section",
+    "special"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/placeholders-and-vanish-input",
+  "files": [
+    "components/ui/placeholders-and-vanish-input.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "07-canvas-2d",
+  "signals": {
+    "loc": 277,
+    "files": 1,
+    "motion_apis": [
+      "AnimatePresence"
+    ],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef",
+      "useCallback"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 3,
+    "svg_filters": 0,
+    "motion_elements": 3,
+    "animate_classes": [],
+    "canvas2d": true,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 0,
+    "dark_classes": 7,
+    "arbitrary_values": 3,
+    "event_listeners": [],
+    "raf": true,
+    "cn_calls": 3,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 5
+  }
+}

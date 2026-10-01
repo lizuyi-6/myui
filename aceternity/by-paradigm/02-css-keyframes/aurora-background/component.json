@@ -1,0 +1,50 @@
+{
+  "name": "aurora-background",
+  "title": "Aurora Background",
+  "kind": "components",
+  "description": "A subtle Aurora or Southern Lights background for your website.",
+  "categories": [
+    "card",
+    "background",
+    "gradient",
+    "special"
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/aurora-background",
+  "files": [
+    "components/ui/aurora-background.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "02-css-keyframes",
+  "signals": {
+    "loc": 62,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 0,
+    "animate_classes": [
+      "animate-aurora"
+    ],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 1,
+    "dark_classes": 4,
+    "arbitrary_values": 4,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 2,
+    "use_client": true,
+    "interfaces": [
+      "AuroraBackgroundProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

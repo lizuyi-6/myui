@@ -1,0 +1,30 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "TerminalStatus-JS-CSS",
+	"title": "TerminalStatus",
+	"description": "A phosphor terminal status display driven by explicit caller-owned idle, running, success or error state.",
+	"type": "registry:component",
+	"files": [
+		{
+			"type": "registry:file",
+			"path": "TerminalStatus.css",
+			"target": "@components/TerminalStatus.css",
+			"content": ".lc-terminal-status-root {\n  box-sizing: border-box;\n  min-width: 0;\n  max-width: 100%;\n  color: var(--lc-ink);\n  font-family: monospace;\n  width: min(100%, 340px);\n  padding: 20px;\n  background: var(--lc-surface);\n  border-top-width: 1px;\n  border-top-style: solid;\n  border-top-color: #3d6850;\n  border-right-width: 1px;\n  border-right-style: solid;\n  border-right-color: #3d6850;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  border-bottom-color: #3d6850;\n  border-left-width: 1px;\n  border-left-style: solid;\n  border-left-color: #3d6850;\n  border-radius: 6px;\n  box-shadow: inset 0 0 32px #00000045;\n}\n.lc-terminal-status-window {\n  display: flex;\n  justify-content: space-between;\n  gap: 12px;\n  margin-bottom: 24px;\n  padding-bottom: 12px;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  border-bottom-color: #3d6850;\n  font-size: 9px;\n  color: #668e74;\n  letter-spacing: 1px;\n}\n.lc-terminal-status-line {\n  display: flex;\n  gap: 10px;\n  font-size: 11px;\n  letter-spacing: 1px;\n}\n.lc-terminal-status-prompt {\n  color: var(--lc-accent);\n}\n.lc-terminal-status-state {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  margin-top: 16px;\n  font-size: 20px;\n  letter-spacing: 2px;\n}\n.lc-terminal-status-led {\n  display: block;\n  width: 8px;\n  height: 8px;\n  box-shadow: 0 0 10px var(--lc-accent);\n}\n.lc-terminal-status-detail {\n  margin: 14px 0 0;\n  font-size: 12px;\n  line-height: 1.7;\n}\n.lc-terminal-status-rule {\n  margin-top: 16px;\n  overflow: hidden;\n  color: #3d6850;\n  white-space: nowrap;\n}\n"
+		},
+		{
+			"type": "registry:component",
+			"path": "TerminalStatus.jsx",
+			"target": "@components/TerminalStatus.jsx",
+			"content": "'use client';\nimport { useRef, useSyncExternalStore } from 'react';\nimport { motion, useInView } from 'motion/react';\nimport './TerminalStatus.css';\nconst c = {\n  root: 'lc-terminal-status-root',\n  window: 'lc-terminal-status-window',\n  line: 'lc-terminal-status-line',\n  prompt: 'lc-terminal-status-prompt',\n  state: 'lc-terminal-status-state',\n  led: 'lc-terminal-status-led',\n  detail: 'lc-terminal-status-detail',\n  rule: 'lc-terminal-status-rule'\n};\nconst motionQuery = '(prefers-reduced-motion: reduce)';\nconst motionSnapshot = () => typeof window !== 'undefined' && window.matchMedia(motionQuery).matches;\nconst motionSubscribe = (listener) => {\n  const media = window.matchMedia(motionQuery);\n  media.addEventListener('change', listener);\n  return () => media.removeEventListener('change', listener);\n};\nfunction useMotionPreference() {\n  return useSyncExternalStore(motionSubscribe, motionSnapshot, () => false);\n}\nexport default function TerminalStatus({\n  status = 'idle',\n  label = 'BUILD PIPELINE',\n  detail = 'Awaiting your next move.',\n  accent = '#80e0a2',\n  surface = '#10241a',\n  ink = '#b3e8c5',\n  className = ''\n}) {\n  const reduce = useMotionPreference();\n  const ref = useRef(null);\n  const near = useInView(ref);\n  const color = status === 'error' ? '#ff9c86' : accent;\n  return (\n    <div\n      className={[c.root, className].filter(Boolean).join(' ')}\n      style={{ '--lc-accent': accent, '--lc-surface': surface, '--lc-ink': ink }}\n      ref={ref}\n    >\n      <div className={c.window}>\n        <span aria-hidden=\"true\">● ● ●</span>\n        <span>STATUS / STDOUT</span>\n      </div>\n      <div className={c.line}>\n        <span className={c.prompt} aria-hidden=\"true\">\n          $\n        </span>\n        <span>{label}</span>\n      </div>\n      <div className={c.state} role=\"status\">\n        <motion.span\n          aria-hidden=\"true\"\n          className={c.led}\n          style={{ background: color }}\n          animate={{ opacity: status === 'running' && !reduce && near ? [0.3, 1, 0.3] : 1 }}\n          transition={status === 'running' && !reduce && near ? { duration: 1.2, repeat: Infinity } : { duration: 0 }}\n        />\n        <strong style={{ color }}>{status.toUpperCase()}</strong>\n      </div>\n      <p className={c.detail}>{detail}</p>\n      <div className={c.rule} aria-hidden=\"true\">\n        ────────────────────\n      </div>\n    </div>\n  );\n}\n"
+		}
+	],
+	"registryDependencies": [],
+	"dependencies": [
+		"motion@^12.23.12"
+	],
+	"meta": {
+		"origin": "local",
+		"style": "Phosphor terminal / 磷光终端",
+		"docsUrl": "http://localhost:5290/micro/terminal-status"
+	}
+}

@@ -1,0 +1,51 @@
+{
+  "name": "text-hover-effect",
+  "title": "Text Hover Effect",
+  "kind": "components",
+  "description": "A text hover effect that animates and outlines gradient on hover, as seen on x.ai",
+  "categories": [
+    "hover",
+    "special",
+    "text"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/text-hover-effect",
+  "files": [
+    "components/ui/text-hover-effect.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "04-svg-vector",
+  "signals": {
+    "loc": 135,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef"
+    ],
+    "pkgs": [],
+    "svg_tags": 1,
+    "svg_paths": 0,
+    "svg_filters": 2,
+    "motion_elements": 2,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 0,
+    "dark_classes": 2,
+    "arbitrary_values": 3,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 0,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 4
+  }
+}

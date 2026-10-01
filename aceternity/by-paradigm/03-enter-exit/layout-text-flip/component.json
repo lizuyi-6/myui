@@ -1,0 +1,53 @@
+{
+  "name": "layout-text-flip",
+  "title": "Layout Text Flip",
+  "kind": "components",
+  "description": "A text flip effect that changes the layout of surrounding text",
+  "categories": [
+    "text",
+    "hero",
+    "effect"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/layout-text-flip",
+  "files": [
+    "components/ui/layout-text-flip.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 59,
+    "files": 1,
+    "motion_apis": [
+      "AnimatePresence",
+      "layoutId"
+    ],
+    "react_hooks": [
+      "useState",
+      "useEffect"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 3,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 3,
+    "dark_classes": 6,
+    "arbitrary_values": 0,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 1,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 3
+  }
+}

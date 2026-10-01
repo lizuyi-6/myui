@@ -1,0 +1,24 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "RibbonBadge-JS-TW",
+	"title": "RibbonBadge",
+	"description": "A vintage folded ribbon badge that reveals supporting content with an accessible disclosure button.",
+	"type": "registry:component",
+	"files": [
+		{
+			"type": "registry:component",
+			"path": "RibbonBadge.jsx",
+			"target": "@components/RibbonBadge.jsx",
+			"content": "'use client';\nimport { useState, useId, useSyncExternalStore } from 'react';\nimport { motion, AnimatePresence } from 'motion/react';\nconst c = {\n  root: '[box-sizing:border-box] [min-width:0] [max-width:100%] [color:var(--lc-ink)] [font-family:inherit] [position:relative] [isolation:isolate] [width:min(100%,320px)] [padding:18px] [background:var(--lc-surface)] [text-align:center]',\n  ribbon:\n    '[box-sizing:border-box] [min-height:58px] [font-family:inherit] [cursor:pointer] [color:#fff8e9] [position:relative] [display:flex] [align-items:center] [justify-content:space-around] [gap:12px] [width:100%] [padding:12px] [border-top-width:1px] [border-top-style:dashed] [border-top-color:#ffffff88] [border-right-width:1px] [border-right-style:dashed] [border-right-color:#ffffff88] [border-bottom-width:1px] [border-bottom-style:dashed] [border-bottom-color:#ffffff88] [border-left-width:1px] [border-left-style:dashed] [border-left-color:#ffffff88] [background:var(--lc-accent)] [outline:5px_solid_var(--lc-accent)] [font:700_12px_Georgia,serif] [letter-spacing:1px] focus-visible:[outline:3px_solid_var(--lc-ink)] focus-visible:[outline-offset:8px]',\n  tailleft:\n    '[position:absolute] [z-index:-1] [top:33px] [left:0] [width:40px] [height:52px] [background:color-mix(in_srgb,var(--lc-accent)_70%,#281c14)] [clip-path:polygon(0_0,100%_0,100%_100%,0_100%,22%_50%)]',\n  tailright:\n    '[position:absolute] [z-index:-1] [top:33px] [right:0] [width:40px] [height:52px] [background:color-mix(in_srgb,var(--lc-accent)_70%,#281c14)] [clip-path:polygon(0_0,100%_0,78%_50%,100%_100%,0_100%)]',\n  detail: '[overflow:hidden]',\n  inner: '[padding:28px_12px_6px] [font:italic_17px/1.7_Georgia,serif]'\n};\nconst motionQuery = '(prefers-reduced-motion: reduce)';\nconst motionSnapshot = () => typeof window !== 'undefined' && window.matchMedia(motionQuery).matches;\nconst motionSubscribe = (listener) => {\n  const media = window.matchMedia(motionQuery);\n  media.addEventListener('change', listener);\n  return () => media.removeEventListener('change', listener);\n};\nfunction useMotionPreference() {\n  return useSyncExternalStore(motionSubscribe, motionSnapshot, () => false);\n}\nexport default function RibbonBadge({\n  label = 'A LITTLE EXTRA',\n  detail = 'Made with care. Kept with love.',\n  defaultOpen = false,\n  onChange,\n  accent = '#ad473e',\n  surface = '#fff3e7',\n  ink = '#603b32',\n  className = ''\n}) {\n  const id = useId();\n  const reduce = useMotionPreference();\n  const [open, setOpen] = useState(defaultOpen);\n  return (\n    <div\n      className={[c.root, className].filter(Boolean).join(' ')}\n      style={{ '--lc-accent': accent, '--lc-surface': surface, '--lc-ink': ink }}\n    >\n      <span aria-hidden=\"true\" className={c.tailleft} />\n      <span aria-hidden=\"true\" className={c.tailright} />\n      <button\n        type=\"button\"\n        className={c.ribbon}\n        aria-expanded={open}\n        aria-controls={id}\n        onClick={() => {\n          setOpen((previous) => !previous);\n          onChange?.(!open);\n        }}\n      >\n        <span aria-hidden=\"true\">✷</span>\n        {label}\n        <span aria-hidden=\"true\">✷</span>\n      </button>\n      <div id={id} aria-hidden={!open} inert={!open}>\n        <AnimatePresence initial={false}>\n          {open && (\n            <motion.div\n              className={c.detail}\n              initial={{ height: 0, opacity: 0 }}\n              animate={{ height: 'auto', opacity: 1 }}\n              exit={{ height: 0, opacity: 0 }}\n              transition={{ duration: reduce ? 0 : 0.28 }}\n            >\n              <div className={c.inner}>{detail}</div>\n            </motion.div>\n          )}\n        </AnimatePresence>\n      </div>\n    </div>\n  );\n}\n"
+		}
+	],
+	"registryDependencies": [],
+	"dependencies": [
+		"motion@^12.23.12"
+	],
+	"meta": {
+		"origin": "local",
+		"style": "Vintage ribbon / 复古绶带",
+		"docsUrl": "http://localhost:5290/micro/ribbon-badge"
+	}
+}

@@ -1,0 +1,56 @@
+{
+  "name": "glowing-effect",
+  "title": "Glowing Effect",
+  "kind": "components",
+  "description": "A border glowing effect that adapts to any container or card, as seen on Cursor's website.",
+  "categories": [
+    "bento grid",
+    "card",
+    "border",
+    "highlight"
+  ],
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/glowing-effect",
+  "files": [
+    "components/ui/glowing-effect.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "01-static-visual",
+  "signals": {
+    "loc": 191,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useEffect",
+      "useRef",
+      "useCallback"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 0,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 7,
+    "dark_classes": 0,
+    "arbitrary_values": 8,
+    "event_listeners": [
+      "scroll"
+    ],
+    "raf": true,
+    "cn_calls": 3,
+    "use_client": true,
+    "interfaces": [
+      "GlowingEffectProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

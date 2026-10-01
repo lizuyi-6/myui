@@ -1,0 +1,50 @@
+{
+  "name": "moving-line",
+  "title": "Moving Line",
+  "kind": "components",
+  "description": "moving-line component for React/Next.js",
+  "categories": [],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/moving-line",
+  "files": [
+    "components/ui/moving-line.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "06-scroll-driven",
+  "signals": {
+    "loc": 102,
+    "files": 1,
+    "motion_apis": [
+      "useScroll",
+      "useTransform",
+      "useSpring",
+      "useMotionValueEvent"
+    ],
+    "react_hooks": [
+      "useRef"
+    ],
+    "pkgs": [],
+    "svg_tags": 1,
+    "svg_paths": 1,
+    "svg_filters": 2,
+    "motion_elements": 1,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 8,
+    "blur": 0,
+    "dark_classes": 0,
+    "arbitrary_values": 0,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 0,
+    "use_client": false,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

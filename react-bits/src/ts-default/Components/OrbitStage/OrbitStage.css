@@ -1,0 +1,164 @@
+.lc-orbit-stage-root {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--lc-ink);
+  font-family: inherit;
+  position: relative;
+  width: min(100%, 400px);
+  padding: 22px 16px 72px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #ffb86b33;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #ffb86b33;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ffb86b33;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #ffb86b33;
+  border-radius: 26px;
+  background: radial-gradient(ellipse at 50% 45%, #6b422c50, transparent 60%), var(--lc-surface);
+}
+.lc-orbit-stage-sky {
+  position: relative;
+  height: 310px;
+  display: grid;
+  place-items: center;
+}
+.lc-orbit-stage-track {
+  position: absolute;
+  width: 258px;
+  height: 218px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #ffb86b55;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #ffb86b55;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ffb86b55;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #ffb86b55;
+  border-radius: 50%;
+}
+.lc-orbit-stage-center {
+  position: absolute;
+  width: 152px;
+  text-align: center;
+}
+.lc-orbit-stage-title {
+  font:
+    24px Georgia,
+    serif;
+  color: var(--lc-accent);
+}
+.lc-orbit-stage-copy {
+  font-size: 11px;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+.lc-orbit-stage-satellite {
+  box-sizing: border-box;
+  min-height: 44px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-ink);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--lc-accent);
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: var(--lc-accent);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--lc-accent);
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: var(--lc-accent);
+  border-radius: 50%;
+  background: var(--lc-surface);
+  font-size: 21px;
+  box-shadow: 0 0 20px #ffb86b30;
+}
+.lc-orbit-stage-satellite:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-orbit-stage-list {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.lc-orbit-stage-subject {
+  box-sizing: border-box;
+  min-height: 44px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-ink);
+  padding: 8px 10px;
+  border-top-width: 0;
+  border-top-style: undefined;
+  border-top-color:;
+  border-right-width: 0;
+  border-right-style: undefined;
+  border-right-color:;
+  border-bottom-width: 0;
+  border-bottom-style: undefined;
+  border-bottom-color:;
+  border-left-width: 0;
+  border-left-style: undefined;
+  border-left-color:;
+  border-radius: 18px;
+  background: transparent;
+  font-size: 10px;
+}
+.lc-orbit-stage-subject:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-orbit-stage-subject[aria-pressed='true'] {
+  background: var(--lc-accent);
+  color: #181411;
+}
+.lc-orbit-stage-pause {
+  box-sizing: border-box;
+  min-height: 44px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-ink);
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 10;
+  width: 44px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: currentColor;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: currentColor;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: currentColor;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: currentColor;
+  border-radius: 50%;
+  background: var(--lc-surface);
+  font-size: 13px;
+}
+.lc-orbit-stage-pause:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}

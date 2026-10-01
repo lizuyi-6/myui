@@ -1,0 +1,116 @@
+'use client';
+import { useState, useId, useSyncExternalStore } from 'react';
+import type { CSSProperties } from 'react';
+import { motion } from 'motion/react';
+
+const c = {
+  root: '[box-sizing:border-box] [min-width:0] [max-width:100%] [color:var(--lc-ink)] [font-family:inherit] [width:min(100%,330px)] [filter:drop-shadow(6px_10px_0_#7052901c)]',
+  trigger:
+    '[box-sizing:border-box] [min-height:44px] [font-family:inherit] [cursor:pointer] [color:#ffffff] [display:flex] [justify-content:space-between] [align-items:center] [gap:12px] [width:100%] [padding:20px] [border-top-width:0] [border-top-style:undefined] [border-top-color:] [border-right-width:0] [border-right-style:undefined] [border-right-color:] [border-bottom-width:0] [border-bottom-style:undefined] [border-bottom-color:] [border-left-width:0] [border-left-style:undefined] [border-left-color:] [background:var(--lc-accent)] [font-size:15px] focus-visible:[outline:2px_solid_var(--lc-accent)] focus-visible:[outline-offset:4px]',
+  fold: '[overflow:hidden] [perspective:700px]',
+  links: '[display:flex] [flex-direction:column] [perspective:700px]',
+  link: '[display:flex] [align-items:center] [gap:12px] [min-height:58px] [padding:12px_20px] [box-sizing:border-box] [border-bottom-width:1px] [border-bottom-style:solid] [border-bottom-color:#8469ad33] [text-decoration:none] [color:var(--lc-ink)] [font-family:Georgia,serif] [transform-origin:top] focus-visible:[outline:2px_solid_var(--lc-accent)] focus-visible:[outline-offset:4px]',
+  number: '[font:10px_monospace] [opacity:0.6]',
+  arrow: '[margin-left:auto] [color:var(--lc-accent)]'
+};
+export interface OrigamiLink {
+  label: string;
+  href: string;
+}
+export interface OrigamiNavProps {
+  items: OrigamiLink[];
+  open?: boolean;
+  defaultOpen?: boolean;
+  onChange?: (open: boolean) => void;
+  label?: string;
+  accent?: string;
+  surface?: string;
+  ink?: string;
+  className?: string;
+}
+
+const motionQuery = '(prefers-reduced-motion: reduce)';
+const motionSnapshot = () => typeof window !== 'undefined' && window.matchMedia(motionQuery).matches;
+const motionSubscribe = (listener: () => void) => {
+  const media = window.matchMedia(motionQuery);
+  media.addEventListener('change', listener);
+  return () => media.removeEventListener('change', listener);
+};
+function useMotionPreference() {
+  return useSyncExternalStore(motionSubscribe, motionSnapshot, () => false);
+}
+
+export default function OrigamiNav({
+  items,
+  open,
+  defaultOpen = false,
+  onChange,
+  label = 'Explore the studio',
+  accent = '#8469ad',
+  surface = '#f0e7fc',
+  ink = '#453558',
+  className = ''
+}: OrigamiNavProps) {
+  const id = useId();
+  const reduce = useMotionPreference();
+  const [inner, setInner] = useState(defaultOpen);
+  const expanded = open ?? inner;
+  return (
+    <nav
+      className={[c.root, className].filter(Boolean).join(' ')}
+      style={{ '--lc-accent': accent, '--lc-surface': surface, '--lc-ink': ink } as CSSProperties}
+      aria-label={label}
+    >
+      <button
+        type="button"
+        className={c.trigger}
+        aria-expanded={expanded}
+        aria-controls={id}
+        onClick={() => {
+          if (open === undefined) setInner(!expanded);
+          onChange?.(!expanded);
+        }}
+      >
+        <span>{label}</span>
+        <motion.span
+          aria-hidden="true"
+          animate={{ rotate: expanded ? 45 : 0 }}
+          transition={{ duration: reduce ? 0 : 0.2 }}
+        >
+          +
+        </motion.span>
+      </button>
+      <motion.div
+        id={id}
+        aria-hidden={!expanded}
+        inert={!expanded}
+        className={c.fold}
+        animate={{ height: expanded ? 'auto' : 0, opacity: expanded ? 1 : 0 }}
+        transition={{ duration: reduce ? 0 : 0.32 }}
+      >
+        <div className={c.links}>
+          {items.map((item, index) => (
+            <motion.a
+              key={item.href + index}
+              href={item.href}
+              className={c.link}
+              initial={false}
+              animate={{ rotateX: reduce || expanded ? 0 : -70 }}
+              transition={{ duration: reduce ? 0 : 0.3, delay: reduce ? 0 : index * 0.04 }}
+              style={{
+                background:
+                  index % 2 === 0 ? 'var(--lc-surface)' : 'color-mix(in srgb,var(--lc-accent) 16%,var(--lc-surface))'
+              }}
+            >
+              <span className={c.number}>{String(index + 1).padStart(2, '0')}</span>
+              {item.label}
+              <span aria-hidden="true" className={c.arrow}>
+                ↗
+              </span>
+            </motion.a>
+          ))}
+        </div>
+      </motion.div>
+    </nav>
+  );
+}

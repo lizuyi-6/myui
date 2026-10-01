@@ -1,0 +1,108 @@
+.lc-liquid-action-root {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--lc-ink);
+  font-family: inherit;
+  position: relative;
+  width: min(100%, 400px);
+  height: 290px;
+  display: grid;
+  place-items: center;
+  border-radius: 36px;
+  background: var(--lc-surface);
+  overflow: hidden;
+}
+.lc-liquid-action-filter {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.lc-liquid-action-pool {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+.lc-liquid-action-blob {
+  position: absolute;
+  width: 190px;
+  height: 80px;
+  border-radius: 45%;
+  background: var(--lc-accent);
+}
+.lc-liquid-action-drop {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--lc-accent);
+}
+.lc-liquid-action-action {
+  box-sizing: border-box;
+  min-height: 44px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-ink);
+  position: relative;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 20px 24px;
+  border-top-width: 0;
+  border-top-style: undefined;
+  border-top-color:;
+  border-right-width: 0;
+  border-right-style: undefined;
+  border-right-color:;
+  border-bottom-width: 0;
+  border-bottom-style: undefined;
+  border-bottom-color:;
+  border-left-width: 0;
+  border-left-style: undefined;
+  border-left-color:;
+  border-radius: 40px;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 700;
+}
+.lc-liquid-action-action:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-liquid-action-action:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+.lc-liquid-action-pause {
+  box-sizing: border-box;
+  min-height: 44px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-ink);
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 10;
+  width: 44px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: currentColor;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: currentColor;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: currentColor;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: currentColor;
+  border-radius: 50%;
+  background: var(--lc-surface);
+  font-size: 13px;
+}
+.lc-liquid-action-pause:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}

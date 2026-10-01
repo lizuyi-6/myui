@@ -1,0 +1,204 @@
+{
+  "firstAppearance": "R5 / PULSAR multi-page website",
+  "componentCount": 18,
+  "files": [
+    {
+      "source": "react-bits/src/content/Components/DepthLiftCard/DepthLiftCard.jsx",
+      "target": "src/vendor/DepthLiftCard.jsx",
+      "sha256": "dd29d2e3560b877e1e5ae552e9ff69e8ea95ca5780285ca7b3f549b0fbc89adf",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/DepthLiftCard/DepthLiftCard.css",
+      "target": "src/vendor/DepthLiftCard.css",
+      "sha256": "df9dbce6a356b4f4b59e58c516afb13ccf8990a1c8c20e219eb69534318dcbbb",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/PrismDeck/PrismDeck.jsx",
+      "target": "src/vendor/PrismDeck.jsx",
+      "sha256": "f51e0bad03e93dff47343fe89168f4537ca073ee4ebdbdf45a3e854d7cccd839",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/PrismDeck/PrismDeck.css",
+      "target": "src/vendor/PrismDeck.css",
+      "sha256": "7c08be7400bc07766aa39d1ad95483128f0081b215fa79ec547d030a2c14048b",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/ConveyorGallery/ConveyorGallery.jsx",
+      "target": "src/vendor/ConveyorGallery.jsx",
+      "sha256": "67ab8dd8db8ace3ab199efb1638d3d9043edf7b5729e3b733bd0a542e3b02364",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/ConveyorGallery/ConveyorGallery.css",
+      "target": "src/vendor/ConveyorGallery.css",
+      "sha256": "a24daeb5cf396cc5ac513156c4f051be59dfdd940bd386bce3b12d77c51f885a",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/KineticTiles/KineticTiles.jsx",
+      "target": "src/vendor/KineticTiles.jsx",
+      "sha256": "2296bf43ee91777b92f718dadec56c8e80cb5f6764f3d7577d880013f63ab7f6",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/KineticTiles/KineticTiles.css",
+      "target": "src/vendor/KineticTiles.css",
+      "sha256": "4289d446dc9388a9a6e5d3fc6399c14d999f54118557299fa678e01e263cbe23",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/LiquidAction/LiquidAction.jsx",
+      "target": "src/vendor/LiquidAction.jsx",
+      "sha256": "8f84f78c5cafb14a81dfc0e04584facd279d235a0004e35105053944309023a0",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/LiquidAction/LiquidAction.css",
+      "target": "src/vendor/LiquidAction.css",
+      "sha256": "b81435f40e0d71067372978f775dc23011e793e1facc29f1905e2ced8d6ddfae",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/OrbitStage/OrbitStage.jsx",
+      "target": "src/vendor/OrbitStage.jsx",
+      "sha256": "b9c441aa28bc0bb279ba401c357aeb9ff9f0ec64993e3dd82cddc9fe817dec2e",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/OrbitStage/OrbitStage.css",
+      "target": "src/vendor/OrbitStage.css",
+      "sha256": "7006d4e52b973a6b3b7f64b8b2fa6ded7611088c4ec12f6863e846e4cab428ae",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/BeamPath/BeamPath.jsx",
+      "target": "src/vendor/BeamPath.jsx",
+      "sha256": "651927a91efb4b1921d2ffe574384a0a4fd6b46a538a7e1133421461fcfc52ab",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/BeamPath/BeamPath.css",
+      "target": "src/vendor/BeamPath.css",
+      "sha256": "32942e87e3a4240983fd140530d4bce9870c60da9db060bdae4e0ad6a7e5ad58",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/ApertureReveal/ApertureReveal.jsx",
+      "target": "src/vendor/ApertureReveal.jsx",
+      "sha256": "4fb25100c42196a04f9a8860080cc847b700b3d378155a7e9b26acc44f66c79c",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/ApertureReveal/ApertureReveal.css",
+      "target": "src/vendor/ApertureReveal.css",
+      "sha256": "e3f9ef39bfb1dd794128b5de49139f4747a0ac5925eb26a67b00d287b9aa1ca7",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/ScrollTheater/ScrollTheater.jsx",
+      "target": "src/vendor/ScrollTheater.jsx",
+      "sha256": "e884b7a94bc37c1489b3e245edd8a61794079ac310b05d7c2d9c4ce587646769",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Components/ScrollTheater/ScrollTheater.css",
+      "target": "src/vendor/ScrollTheater.css",
+      "sha256": "80a0d61d22960cf3244bd6751e9d76f7c9ca45133911f6cf82145505a202f1df",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Micro/RippleButton/RippleButton.jsx",
+      "target": "src/vendor/RippleButton.jsx",
+      "sha256": "646fbcace30ed8d4c348d928a98cf2693287f0eed7001e062c81a3ab5019fd9c",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Micro/RippleButton/RippleButton.css",
+      "target": "src/vendor/RippleButton.css",
+      "sha256": "7154a278fca3ab450ec6cc497f974cbcd543770d97adc5c015857f7fcd552509",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Micro/SpringAccordion/SpringAccordion.jsx",
+      "target": "src/vendor/SpringAccordion.jsx",
+      "sha256": "5d00b7fe0a7842f2bf5e6aba4130fe0240b44d61480ca39139ad8ddf9738d2cb",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Micro/SpringAccordion/SpringAccordion.css",
+      "target": "src/vendor/SpringAccordion.css",
+      "sha256": "877e910298e4f00591c510c017e0ab54de5de8068ac95ca12956e33de9599e32",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Micro/ElasticTabs/ElasticTabs.jsx",
+      "target": "src/vendor/ElasticTabs.jsx",
+      "sha256": "1a75ae482899124c19397b2c1cd8095c0c9610766b98b2926ec1c5501fec5931",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Micro/ElasticTabs/ElasticTabs.css",
+      "target": "src/vendor/ElasticTabs.css",
+      "sha256": "f1950f2aa0c2fd4f6fd9a1837a338ef82161ad797a90263aa4ad13e81761017a",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Micro/PaperNote/PaperNote.jsx",
+      "target": "src/vendor/PaperNote.jsx",
+      "sha256": "ed5ef185237578a11c01ec1b12dd9084a5d6b7859a74cfee4a314eba3be684ee",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Micro/PaperNote/PaperNote.css",
+      "target": "src/vendor/PaperNote.css",
+      "sha256": "b3357eb13f854f1b4f19002a2deea2f07159be37a068f85be2194db6a3cedf48",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Micro/ArcadeButton/ArcadeButton.jsx",
+      "target": "src/vendor/ArcadeButton.jsx",
+      "sha256": "50c8b2c5f675f1f6a6507569eb9c02d38cfa464799cc153bab6d08a43d618f0f",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/Micro/ArcadeButton/ArcadeButton.css",
+      "target": "src/vendor/ArcadeButton.css",
+      "sha256": "01d47af286db42dd46ef5a7a7c2f7ff6db4ed68c340a6d151b1d048e43b14aaf",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/TextAnimations/RotatingText/RotatingText.jsx",
+      "target": "src/vendor/RotatingText.jsx",
+      "sha256": "0dd9e9aa839c606171667ca5d3db2f6ef6b23c6ce8dc499eead6d71188633ecf",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "react-bits/src/content/TextAnimations/RotatingText/RotatingText.css",
+      "target": "src/vendor/RotatingText.css",
+      "sha256": "d7eaee32661138bc9ec9de146b45407edcb9aff53f7b1065ece971ea16462ea5",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "aceternity/by-paradigm/01-static-visual/3d-card/components/ui/3d-card.tsx",
+      "target": "src/vendor/3d-card.tsx",
+      "sha256": "ec2f994a294aa81bb10d8a4a8512e1d9d90acdccf2fb1c8eadf83874c5be34e8",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "aceternity/by-paradigm/01-static-visual/bento-grid/components/ui/bento-grid.tsx",
+      "target": "src/vendor/bento-grid.tsx",
+      "sha256": "a3cdb12c2f3183385859da768cd5a66a4024dd017230fb278b8f2d2acf85c730",
+      "adaptation": "none; byte-identical copy"
+    },
+    {
+      "source": "aceternity/by-paradigm/03-enter-exit/pointer-highlight/components/ui/pointer-highlight.tsx",
+      "target": "src/vendor/pointer-highlight.tsx",
+      "sha256": "e32a56b7eeb6dc4bfe8c05bc7c025310f26ab3d43aba6bbb22813b1a47960dc0",
+      "adaptation": "none; byte-identical copy"
+    }
+  ]
+}

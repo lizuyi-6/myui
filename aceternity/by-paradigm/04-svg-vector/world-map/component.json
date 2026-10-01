@@ -1,0 +1,52 @@
+{
+  "name": "world-map",
+  "title": "World Map",
+  "kind": "components",
+  "description": "A world map with animated lines and dots, programatically generated.",
+  "categories": [
+    "map",
+    "special",
+    "features"
+  ],
+  "dependencies": [
+    "dotted-map",
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/world-map",
+  "files": [
+    "components/ui/world-map.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "04-svg-vector",
+  "signals": {
+    "loc": 171,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useRef"
+    ],
+    "pkgs": [],
+    "svg_tags": 1,
+    "svg_paths": 0,
+    "svg_filters": 2,
+    "motion_elements": 1,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 0,
+    "dark_classes": 1,
+    "arbitrary_values": 1,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 0,
+    "use_client": true,
+    "interfaces": [
+      "MapProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 2
+  }
+}

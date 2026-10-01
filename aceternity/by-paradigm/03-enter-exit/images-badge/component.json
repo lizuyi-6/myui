@@ -1,0 +1,51 @@
+{
+  "name": "images-badge",
+  "title": "Images Badge",
+  "kind": "components",
+  "description": "A badge with images that can be hovered to reveal more images.",
+  "categories": [
+    "card",
+    "background",
+    "gradient",
+    "special",
+    "call to action"
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/images-badge",
+  "files": [
+    "components/ui/images-badge.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 178,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useState"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 3,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 18,
+    "blur": 0,
+    "dark_classes": 11,
+    "arbitrary_values": 6,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 1,
+    "use_client": true,
+    "interfaces": [
+      "ImagesBadgeProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 2
+  }
+}

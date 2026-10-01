@@ -1,0 +1,56 @@
+{
+  "name": "animated-tooltip",
+  "title": "Animated Tooltip",
+  "kind": "components",
+  "description": "A cool tooltip that reveals on hover, follows mouse pointer",
+  "categories": [
+    "card",
+    "hover",
+    "special",
+    "utility"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/animated-tooltip",
+  "files": [
+    "components/ui/animated-tooltip.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "05-motion-pipeline",
+  "signals": {
+    "loc": 100,
+    "files": 1,
+    "motion_apis": [
+      "AnimatePresence",
+      "useTransform",
+      "useSpring",
+      "useMotionValue"
+    ],
+    "react_hooks": [
+      "useState",
+      "useRef"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 1,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 10,
+    "blur": 0,
+    "dark_classes": 0,
+    "arbitrary_values": 2,
+    "event_listeners": [],
+    "raf": true,
+    "cn_calls": 0,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 3
+  }
+}

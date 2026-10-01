@@ -1,0 +1,55 @@
+{
+  "name": "container-text-flip",
+  "title": "Container Text Flip",
+  "kind": "components",
+  "description": "A container that flips through words, animating the width.",
+  "categories": [
+    "text",
+    "animation",
+    "container",
+    "hero"
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/container-text-flip",
+  "files": [
+    "components/ui/container-text-flip.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 105,
+    "files": 1,
+    "motion_apis": [
+      "layoutId"
+    ],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef",
+      "useId"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 4,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 2,
+    "dark_classes": 3,
+    "arbitrary_values": 2,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 2,
+    "use_client": true,
+    "interfaces": [
+      "ContainerTextFlipProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 3
+  }
+}

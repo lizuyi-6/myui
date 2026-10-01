@@ -1,0 +1,78 @@
+.lc-ribbon-badge-root {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--lc-ink);
+  font-family: inherit;
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 320px);
+  padding: 18px;
+  background: var(--lc-surface);
+  text-align: center;
+}
+.lc-ribbon-badge-ribbon {
+  box-sizing: border-box;
+  min-height: 58px;
+  font-family: inherit;
+  cursor: pointer;
+  color: #fff8e9;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 12px;
+  width: 100%;
+  padding: 12px;
+  border-top-width: 1px;
+  border-top-style: dashed;
+  border-top-color: #ffffff88;
+  border-right-width: 1px;
+  border-right-style: dashed;
+  border-right-color: #ffffff88;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: #ffffff88;
+  border-left-width: 1px;
+  border-left-style: dashed;
+  border-left-color: #ffffff88;
+  background: var(--lc-accent);
+  outline: 5px solid var(--lc-accent);
+  font:
+    700 12px Georgia,
+    serif;
+  letter-spacing: 1px;
+}
+.lc-ribbon-badge-ribbon:focus-visible {
+  outline: 3px solid var(--lc-ink);
+  outline-offset: 8px;
+}
+.lc-ribbon-badge-tailleft {
+  position: absolute;
+  z-index: -1;
+  top: 33px;
+  left: 0;
+  width: 40px;
+  height: 52px;
+  background: color-mix(in srgb, var(--lc-accent) 70%, #281c14);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 22% 50%);
+}
+.lc-ribbon-badge-tailright {
+  position: absolute;
+  z-index: -1;
+  top: 33px;
+  right: 0;
+  width: 40px;
+  height: 52px;
+  background: color-mix(in srgb, var(--lc-accent) 70%, #281c14);
+  clip-path: polygon(0 0, 100% 0, 78% 50%, 100% 100%, 0 100%);
+}
+.lc-ribbon-badge-detail {
+  overflow: hidden;
+}
+.lc-ribbon-badge-inner {
+  padding: 28px 12px 6px;
+  font:
+    italic 17px/1.7 Georgia,
+    serif;
+}

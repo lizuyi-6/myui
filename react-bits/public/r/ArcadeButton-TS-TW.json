@@ -1,0 +1,24 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "ArcadeButton-TS-TW",
+	"title": "ArcadeButton",
+	"description": "Chunky arcade key with a stepped silhouette, hard offset shadow and physical press travel.",
+	"type": "registry:component",
+	"files": [
+		{
+			"type": "registry:component",
+			"path": "ArcadeButton.tsx",
+			"target": "@components/ArcadeButton.tsx",
+			"content": "'use client';\nimport { useState, useSyncExternalStore } from 'react';\nimport type { CSSProperties } from 'react';\nimport { motion } from 'motion/react';\n\nconst c = {\n  root: '[box-sizing:border-box] [min-width:0] [max-width:100%] [color:var(--lc-ink)] [font-family:monospace] [width:min(100%,300px)] [padding:24px] [background:var(--lc-surface)] [border-top-width:3px] [border-top-style:solid] [border-top-color:var(--lc-ink)] [border-right-width:3px] [border-right-style:solid] [border-right-color:var(--lc-ink)] [border-bottom-width:3px] [border-bottom-style:solid] [border-bottom-color:var(--lc-ink)] [border-left-width:3px] [border-left-style:solid] [border-left-color:var(--lc-ink)]',\n  topline: '[display:flex] [justify-content:space-between] [margin-bottom:26px] [font-size:11px] [letter-spacing:1px]',\n  key: '[box-sizing:border-box] [min-height:72px] [font-family:inherit] [cursor:pointer] [color:var(--lc-ink)] [display:flex] [align-items:center] [justify-content:center] [gap:14px] [position:relative] [width:100%] [border-top-width:3px] [border-top-style:solid] [border-top-color:var(--lc-ink)] [border-right-width:3px] [border-right-style:solid] [border-right-color:var(--lc-ink)] [border-bottom-width:3px] [border-bottom-style:solid] [border-bottom-color:var(--lc-ink)] [border-left-width:3px] [border-left-style:solid] [border-left-color:var(--lc-ink)] [border-radius:0] [background:var(--lc-accent)] [box-shadow:6px_8px_0_var(--lc-ink)] [font-size:17px] [font-weight:900] [letter-spacing:1px] focus-visible:[outline:2px_solid_var(--lc-accent)] focus-visible:[outline-offset:4px] disabled:[opacity:0.45] disabled:[cursor:not-allowed]',\n  star: '[font-size:28px]',\n  bottomline: '[margin-top:26px] [font-size:9px] [letter-spacing:1px] [text-align:center]'\n};\n\nexport interface ArcadeButtonProps {\n  label?: string;\n  onClick?: () => void;\n  disabled?: boolean;\n  accent?: string;\n  surface?: string;\n  ink?: string;\n  className?: string;\n}\n\nconst motionQuery = '(prefers-reduced-motion: reduce)';\nconst motionSnapshot = () => typeof window !== 'undefined' && window.matchMedia(motionQuery).matches;\nconst motionSubscribe = (listener: () => void) => {\n  const media = window.matchMedia(motionQuery);\n  media.addEventListener('change', listener);\n  return () => media.removeEventListener('change', listener);\n};\nfunction useMotionPreference() {\n  return useSyncExternalStore(motionSubscribe, motionSnapshot, () => false);\n}\n\nexport default function ArcadeButton({\n  label = 'INSERT COIN',\n  onClick,\n  disabled = false,\n  accent = '#ffb83e',\n  surface = '#fbeac3',\n  ink = '#312316',\n  className = ''\n}: ArcadeButtonProps) {\n  const reduce = useMotionPreference();\n  const [pressed, setPressed] = useState(false);\n  return (\n    <div\n      className={[c.root, className].filter(Boolean).join(' ')}\n      style={{ '--lc-accent': accent, '--lc-surface': surface, '--lc-ink': ink } as CSSProperties}\n    >\n      <div className={c.topline}>\n        <span>PLAYER 01</span>\n        <span aria-hidden=\"true\">◆ ◆ ◆</span>\n      </div>\n      <motion.button\n        type=\"button\"\n        disabled={disabled}\n        className={c.key}\n        onPointerDown={() => setPressed(true)}\n        onPointerUp={() => setPressed(false)}\n        onPointerCancel={() => setPressed(false)}\n        onPointerLeave={() => setPressed(false)}\n        onKeyDown={(event) => {\n          if (event.key === ' ' || event.key === 'Enter') setPressed(true);\n        }}\n        onKeyUp={() => setPressed(false)}\n        onBlur={() => setPressed(false)}\n        onClick={onClick}\n        animate={{ y: pressed && !disabled && !reduce ? 6 : 0 }}\n        transition={{ duration: reduce ? 0 : 0.08 }}\n      >\n        <span aria-hidden=\"true\" className={c.star}>\n          ✦\n        </span>\n        {label}\n      </motion.button>\n      <div className={c.bottomline}>PRESS START / MAKE YOUR MOVE</div>\n    </div>\n  );\n}\n"
+		}
+	],
+	"registryDependencies": [],
+	"dependencies": [
+		"motion@^12.23.12"
+	],
+	"meta": {
+		"origin": "local",
+		"style": "8-bit arcade / 像素街机",
+		"docsUrl": "http://localhost:5290/micro/arcade-button"
+	}
+}

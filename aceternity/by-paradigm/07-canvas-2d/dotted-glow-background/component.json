@@ -1,0 +1,55 @@
+{
+  "name": "dotted-glow-background",
+  "title": "Dotted Glow Background",
+  "kind": "components",
+  "description": "A background effect with opacity animation, glow effect and more.",
+  "categories": [
+    "card",
+    "background",
+    "gradient",
+    "special",
+    "call to action"
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/dotted-glow-background",
+  "files": [
+    "components/ui/dotted-glow-background.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "07-canvas-2d",
+  "signals": {
+    "loc": 321,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useState",
+      "useEffect",
+      "useRef"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 0,
+    "animate_classes": [],
+    "canvas2d": true,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 0,
+    "dark_classes": 0,
+    "arbitrary_values": 0,
+    "event_listeners": [
+      "resize"
+    ],
+    "raf": true,
+    "cn_calls": 0,
+    "use_client": true,
+    "interfaces": [
+      "DottedGlowBackgroundProps"
+    ],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

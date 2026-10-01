@@ -1,0 +1,76 @@
+.lc-origami-nav-root {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--lc-ink);
+  font-family: inherit;
+  width: min(100%, 330px);
+  filter: drop-shadow(6px 10px 0 #7052901c);
+}
+.lc-origami-nav-trigger {
+  box-sizing: border-box;
+  min-height: 44px;
+  font-family: inherit;
+  cursor: pointer;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 20px;
+  border-top-width: 0;
+  border-top-style: undefined;
+  border-top-color:;
+  border-right-width: 0;
+  border-right-style: undefined;
+  border-right-color:;
+  border-bottom-width: 0;
+  border-bottom-style: undefined;
+  border-bottom-color:;
+  border-left-width: 0;
+  border-left-style: undefined;
+  border-left-color:;
+  background: var(--lc-accent);
+  font-size: 15px;
+}
+.lc-origami-nav-trigger:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-origami-nav-fold {
+  overflow: hidden;
+  perspective: 700px;
+}
+.lc-origami-nav-links {
+  display: flex;
+  flex-direction: column;
+  perspective: 700px;
+}
+.lc-origami-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 58px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #8469ad33;
+  text-decoration: none;
+  color: var(--lc-ink);
+  font-family: Georgia, serif;
+  transform-origin: top;
+}
+.lc-origami-nav-link:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-origami-nav-number {
+  font: 10px monospace;
+  opacity: 0.6;
+}
+.lc-origami-nav-arrow {
+  margin-left: auto;
+  color: var(--lc-accent);
+}

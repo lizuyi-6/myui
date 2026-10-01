@@ -1,0 +1,52 @@
+{
+  "name": "comet-card",
+  "title": "Comet Card",
+  "kind": "components",
+  "description": "A perspective, 3D, Tilt card as seen on Perplexity Comet's website.",
+  "categories": [
+    "card",
+    "3D",
+    "tilt"
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": "https://ui.aceternity.com/components/comet-card",
+  "files": [
+    "components/ui/comet-card.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "05-motion-pipeline",
+  "signals": {
+    "loc": 116,
+    "files": 1,
+    "motion_apis": [
+      "useTransform",
+      "useSpring",
+      "useMotionValue",
+      "useMotionTemplate"
+    ],
+    "react_hooks": [
+      "useRef"
+    ],
+    "pkgs": [],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 2,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 0,
+    "blur": 0,
+    "dark_classes": 0,
+    "arbitrary_values": 1,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 1,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 1
+  }
+}

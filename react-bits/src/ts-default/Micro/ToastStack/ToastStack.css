@@ -1,0 +1,97 @@
+.lc-toast-stack-root {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--lc-ink);
+  font-family: inherit;
+  width: min(100%, 380px);
+  border-radius: 20px;
+}
+.lc-toast-stack-root:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-toast-stack-stack {
+  position: relative;
+}
+.lc-toast-stack-toast {
+  position: absolute;
+  inset: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 80px;
+  box-sizing: border-box;
+  padding: 14px 8px 14px 18px;
+  border-radius: 20px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: color-mix(in srgb, var(--lc-ink) 15%, transparent);
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: color-mix(in srgb, var(--lc-ink) 15%, transparent);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: color-mix(in srgb, var(--lc-ink) 15%, transparent);
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: color-mix(in srgb, var(--lc-ink) 15%, transparent);
+  background: color-mix(in srgb, var(--lc-surface) 88%, transparent);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 12px 32px #06372312;
+}
+.lc-toast-stack-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--lc-accent) 12%, transparent);
+  color: var(--lc-accent);
+}
+.lc-toast-stack-copy {
+  min-width: 0;
+  flex: 1;
+  font-size: 14px;
+}
+.lc-toast-stack-message {
+  margin: 5px 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.lc-toast-stack-close {
+  box-sizing: border-box;
+  min-height: 44px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-ink);
+  width: 44px;
+  flex-shrink: 0;
+  border-top-width: 0;
+  border-top-style: undefined;
+  border-top-color:;
+  border-right-width: 0;
+  border-right-style: undefined;
+  border-right-color:;
+  border-bottom-width: 0;
+  border-bottom-style: undefined;
+  border-bottom-color:;
+  border-left-width: 0;
+  border-left-style: undefined;
+  border-left-color:;
+  border-radius: 12px;
+  background: transparent;
+  font-size: 22px;
+}
+.lc-toast-stack-close:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-toast-stack-empty {
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+}

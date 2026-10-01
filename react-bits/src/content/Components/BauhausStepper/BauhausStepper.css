@@ -1,0 +1,91 @@
+.lc-bauhaus-stepper-root {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--lc-ink);
+  font-family: inherit;
+  width: min(100%, 440px);
+  padding: 24px;
+  background: var(--lc-surface);
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: var(--lc-ink);
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: var(--lc-ink);
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--lc-ink);
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: var(--lc-ink);
+}
+.lc-bauhaus-stepper-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.lc-bauhaus-stepper-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 28px 0 20px;
+}
+.lc-bauhaus-stepper-step {
+  box-sizing: border-box;
+  min-height: 44px;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--lc-ink);
+  display: flex;
+  flex: 1;
+  min-width: 72px;
+  align-items: center;
+  flex-direction: column;
+  gap: 14px;
+  border-top-width: 0;
+  border-top-style: undefined;
+  border-top-color:;
+  border-right-width: 0;
+  border-right-style: undefined;
+  border-right-color:;
+  border-bottom-width: 0;
+  border-bottom-style: undefined;
+  border-bottom-color:;
+  border-left-width: 0;
+  border-left-style: undefined;
+  border-left-color:;
+  background: transparent;
+  padding: 4px;
+}
+.lc-bauhaus-stepper-step:focus-visible {
+  outline: 2px solid var(--lc-accent);
+  outline-offset: 4px;
+}
+.lc-bauhaus-stepper-shape {
+  display: block;
+  width: 54px;
+  height: 54px;
+}
+.lc-bauhaus-stepper-stepname {
+  font: 10px monospace;
+  line-height: 1.6;
+  text-align: center;
+}
+.lc-bauhaus-stepper-track {
+  height: 5px;
+  background: #24232324;
+}
+.lc-bauhaus-stepper-progress {
+  height: 100%;
+  background: var(--lc-ink);
+}
+.lc-bauhaus-stepper-output {
+  display: block;
+  margin-top: 18px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}

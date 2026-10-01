@@ -1,0 +1,46 @@
+{
+  "name": "cards-demo-3",
+  "title": "Cards Demo 3",
+  "kind": "blocks",
+  "description": null,
+  "categories": [],
+  "dependencies": [],
+  "registryDependencies": [],
+  "documentationUrl": null,
+  "files": [
+    "components/cards-demo-3.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "04-svg-vector",
+  "signals": {
+    "loc": 360,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useState",
+      "useEffect"
+    ],
+    "pkgs": [],
+    "svg_tags": 4,
+    "svg_paths": 6,
+    "svg_filters": 5,
+    "motion_elements": 1,
+    "animate_classes": [
+      "animate-move"
+    ],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 5,
+    "blur": 0,
+    "dark_classes": 7,
+    "arbitrary_values": 8,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 5,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 1
+  }
+}

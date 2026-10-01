@@ -1,0 +1,49 @@
+{
+  "name": "features-section-demo-3",
+  "title": "Features Section Demo 3",
+  "kind": "blocks",
+  "description": null,
+  "categories": [],
+  "dependencies": [
+    "@tabler/icons-react",
+    "cobe"
+  ],
+  "registryDependencies": [],
+  "documentationUrl": null,
+  "files": [
+    "components/features-section-demo-3.tsx"
+  ],
+  "author": "Manu Arora <hi@manuarora.in>",
+  "paradigm": "03-enter-exit",
+  "signals": {
+    "loc": 282,
+    "files": 1,
+    "motion_apis": [],
+    "react_hooks": [
+      "useEffect",
+      "useRef"
+    ],
+    "pkgs": [
+      "@tabler/icons-react"
+    ],
+    "svg_tags": 0,
+    "svg_paths": 0,
+    "svg_filters": 0,
+    "motion_elements": 2,
+    "animate_classes": [],
+    "canvas2d": false,
+    "webgl_shader": false,
+    "tsparticles": false,
+    "gradients": 28,
+    "blur": 2,
+    "dark_classes": 21,
+    "arbitrary_values": 2,
+    "event_listeners": [],
+    "raf": false,
+    "cn_calls": 2,
+    "use_client": true,
+    "interfaces": [],
+    "forwardRef": false,
+    "animate_props": 0
+  }
+}

@@ -1,0 +1,30 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "PaperNote-JS-CSS",
+	"title": "PaperNote",
+	"description": "Editable ruled sticky note with a tape tab, live draft callback and pin-controlled paper tilt.",
+	"type": "registry:component",
+	"files": [
+		{
+			"type": "registry:file",
+			"path": "PaperNote.css",
+			"target": "@components/PaperNote.css",
+			"content": ".lc-paper-note-root {\n  box-sizing: border-box;\n  min-width: 0;\n  max-width: 100%;\n  color: var(--lc-ink);\n  font-family: inherit;\n  position: relative;\n  width: min(100%, 300px);\n  padding: 24px 24px 20px;\n  background: var(--lc-surface);\n  box-shadow: 4px 12px 22px #48341326;\n  border-radius: 2px;\n}\n.lc-paper-note-tape {\n  position: absolute;\n  width: 92px;\n  height: 26px;\n  top: -12px;\n  left: calc(50% - 46px);\n  transform: rotate(4deg);\n  background: #ffffff88;\n  border-left-width: 2px;\n  border-left-style: dotted;\n  border-left-color: #c8bb8980;\n  border-right-width: 2px;\n  border-right-style: dotted;\n  border-right-color: #c8bb8980;\n}\n.lc-paper-note-header {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  font:\n    italic 15px Georgia,\n    serif;\n}\n.lc-paper-note-pin {\n  box-sizing: border-box;\n  min-height: 44px;\n  font-family: inherit;\n  cursor: pointer;\n  color: var(--lc-accent);\n  width: 44px;\n  border-top-width: 0;\n  border-top-style: undefined;\n  border-top-color:;\n  border-right-width: 0;\n  border-right-style: undefined;\n  border-right-color:;\n  border-bottom-width: 0;\n  border-bottom-style: undefined;\n  border-bottom-color:;\n  border-left-width: 0;\n  border-left-style: undefined;\n  border-left-color:;\n  background: transparent;\n  font-size: 22px;\n}\n.lc-paper-note-pin:focus-visible {\n  outline: 2px solid var(--lc-accent);\n  outline-offset: 4px;\n}\n.lc-paper-note-text {\n  box-sizing: border-box;\n  display: block;\n  resize: vertical;\n  width: 100%;\n  min-height: 144px;\n  max-height: 360px;\n  border-top-width: 0;\n  border-top-style: undefined;\n  border-top-color:;\n  border-right-width: 0;\n  border-right-style: undefined;\n  border-right-color:;\n  border-bottom-width: 0;\n  border-bottom-style: undefined;\n  border-bottom-color:;\n  border-left-width: 0;\n  border-left-style: undefined;\n  border-left-color:;\n  padding: 4px 0;\n  margin-top: 10px;\n  background: repeating-linear-gradient(transparent, transparent 31px, #b7a95355 31px, #b7a95355 32px);\n  color: var(--lc-ink);\n  font:\n    italic 20px/32px Georgia,\n    serif;\n}\n.lc-paper-note-text:focus-visible {\n  outline: 2px solid var(--lc-accent);\n  outline-offset: 4px;\n}\n.lc-paper-note-fold {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  width: 0;\n  height: 0;\n  border-top-width: 22px;\n  border-top-style: solid;\n  border-top-color: #d5bf67;\n  border-right-width: 22px;\n  border-right-style: solid;\n  border-right-color: transparent;\n}\n.lc-paper-note-footer {\n  margin-top: 16px;\n  font: 10px monospace;\n  color: var(--lc-accent);\n}\n"
+		},
+		{
+			"type": "registry:component",
+			"path": "PaperNote.jsx",
+			"target": "@components/PaperNote.jsx",
+			"content": "'use client';\nimport { useState, useId, useSyncExternalStore } from 'react';\nimport { motion } from 'motion/react';\nimport './PaperNote.css';\nconst c = {\n  root: 'lc-paper-note-root',\n  tape: 'lc-paper-note-tape',\n  header: 'lc-paper-note-header',\n  pin: 'lc-paper-note-pin',\n  text: 'lc-paper-note-text',\n  fold: 'lc-paper-note-fold',\n  footer: 'lc-paper-note-footer'\n};\nconst motionQuery = '(prefers-reduced-motion: reduce)';\nconst motionSnapshot = () => typeof window !== 'undefined' && window.matchMedia(motionQuery).matches;\nconst motionSubscribe = (listener) => {\n  const media = window.matchMedia(motionQuery);\n  media.addEventListener('change', listener);\n  return () => media.removeEventListener('change', listener);\n};\nfunction useMotionPreference() {\n  return useSyncExternalStore(motionSubscribe, motionSnapshot, () => false);\n}\nexport default function PaperNote({\n  value,\n  defaultValue = 'Make something worth keeping.',\n  onChange,\n  label = 'A small thought',\n  defaultPinned = false,\n  accent = '#cb6745',\n  surface = '#fff0a5',\n  ink = '#55452a',\n  className = ''\n}) {\n  const id = useId();\n  const reduce = useMotionPreference();\n  const [draft, setDraft] = useState(defaultValue);\n  const [pinned, setPinned] = useState(defaultPinned);\n  return (\n    <motion.div\n      className={[c.root, className].filter(Boolean).join(' ')}\n      style={{ '--lc-accent': accent, '--lc-surface': surface, '--lc-ink': ink }}\n      animate={{ rotate: pinned || reduce ? 0 : -3 }}\n      transition={reduce ? { duration: 0 } : { type: 'spring', stiffness: 170, damping: 17 }}\n    >\n      <span aria-hidden=\"true\" className={c.tape} />\n      <div className={c.header}>\n        <label htmlFor={id}>{label}</label>\n        <button\n          type=\"button\"\n          aria-pressed={pinned}\n          aria-label={pinned ? 'Unpin note' : 'Pin note'}\n          onClick={() => setPinned((previous) => !previous)}\n          className={c.pin}\n        >\n          {pinned ? '●' : '○'}\n        </button>\n      </div>\n      <textarea\n        id={id}\n        value={value ?? draft}\n        onChange={(event) => {\n          if (value === undefined) setDraft(event.target.value);\n          onChange?.(event.target.value);\n        }}\n        className={c.text}\n      />\n      <span aria-hidden=\"true\" className={c.fold} />\n      <div className={c.footer}>a thought for later ↗</div>\n    </motion.div>\n  );\n}\n"
+		}
+	],
+	"registryDependencies": [],
+	"dependencies": [
+		"motion@^12.23.12"
+	],
+	"meta": {
+		"origin": "local",
+		"style": "Analog stationery / 手写便签",
+		"docsUrl": "http://localhost:5290/micro/paper-note"
+	}
+}
